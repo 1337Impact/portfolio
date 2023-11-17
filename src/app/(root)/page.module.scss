@@ -1,0 +1,9 @@
+@import "@/utils/typed"; 
+.placeholder {
+  @include typed(
+    "TypeScript",
+    "React",
+    "Next.js",
+    1, (caret-width: 2px, caret-space: 2px)
+  );
+}
