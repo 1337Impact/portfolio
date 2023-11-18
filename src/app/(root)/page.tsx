@@ -12,9 +12,9 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center">
           <h1 className="text-lg text-center text-gray-700">
-            Hello I'm Mohammed Benkhattab
+            Hello I'm <span className="font-pacifico">Mohammed Benkhattab</span>
           </h1>
-          <p className="mt-1 max-w-4xl text-center text-4xl leading-[3rem] text-foreground lg:text-5xl lg:leading-[4rem]">
+          <p className="mt-1 max-w-4xl text-center text-4xl text-gray-800 leading-[3.2rem] text-foreground lg:text-5xl lg:leading-[4rem]">
             I'm a full-stack developer, I love building things with
             <span
               className={`${styles.placeholder} block pl-1 text-red-500`}
@@ -32,21 +32,19 @@ export default function Home() {
       </section>
       <section id="projects" className="h-screen pt-7">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4 xl:gap-6 mx-1">
-          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+          <ProjectCard title="Ft_trascendence" date="Sep - 2023" tech={["React", "TypeScript", "Next.js"]} >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptates, cumque, voluptatem, quas quod quia voluptatum
               consequatur quibusdam voluptas doloribus voluptate. Quisquam
               voluptates, cumque, voluptatem, quas quod quia voluptatum
               consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
-          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+          <ProjectCard title="Ft_irc" date="Sep - 2023" >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate. Quisquam
               voluptates, cumque, voluptatem, quas quod quia voluptatum
               consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
-          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+          <ProjectCard title="Cub3d" date="Sep - 2023" >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptates, cumque, voluptatem, quas quod quia voluptatum
               consequatur quibusdam voluptas doloribus voluptate. Quisquam

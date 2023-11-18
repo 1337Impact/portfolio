@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        pacifico: ['pacifico', 'cursive']
+        pacifico: ['pacifico', 'cursive'],
+        manrope: ['Manrope', 'sans-serif'],
       }
     },
   },

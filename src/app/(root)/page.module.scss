@@ -16,23 +16,22 @@
   content: "";
   position: absolute;
   opacity: .4;
-  width: 120px;
+  width:80px;
   height: 100vh;
-  top: -100px;
-  left: 50vw;
-  filter: blur(400px);
+  top: -50px;
+  left: calc(50% - 40px);
+  filter: blur(90px);
   z-index: -1;
-  animation: rotate 60s infinite;
 }
 
 .home::before{
-  background-color: red;
-
+  background-color: blue;
+  animation: rotate 30s ease infinite;
 }
 
 .home::after{
-  background-color: blue;
-  animation-delay: 4s;
+  background-color: red;
+  animation: rotate 30s ease reverse infinite;
 }
 
 @keyframes rotate {
@@ -40,7 +39,7 @@
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(.59turn);
+    transform: rotate(180deg);
   }
   100% {
     transform: rotate(0deg);
@@ -51,5 +50,6 @@
   .home::after,
   .home::before{
     width: 300px;
+    left: calc(50% - 150px);
   }
 }
