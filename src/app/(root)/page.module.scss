@@ -7,3 +7,49 @@
     1, (caret-width: 2px, caret-space: 2px)
   );
 }
+.home{
+  position: relative;
+}
+
+.home::before,
+.home::after{
+  content: "";
+  position: absolute;
+  opacity: .4;
+  width: 120px;
+  height: 100vh;
+  top: -100px;
+  left: 50vw;
+  filter: blur(400px);
+  z-index: -1;
+  animation: rotate 60s infinite;
+}
+
+.home::before{
+  background-color: red;
+
+}
+
+.home::after{
+  background-color: blue;
+  animation-delay: 4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(.59turn);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home::after,
+  .home::before{
+    width: 300px;
+  }
+}

@@ -1,9 +1,10 @@
 import styles from "./page.module.scss";
 import { RxChevronDown } from "react-icons/rx";
+import ProjectCard from "./projectCard";
 
 export default function Home() {
   return (
-    <main className="px-2 lg:w-[60%] lg:mx-auto">
+    <main className={`px-2 md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto ${styles.home}`}>
       <section
         id="home"
         aria-labelledby="home"
@@ -15,19 +16,47 @@ export default function Home() {
           </h1>
           <p className="mt-1 max-w-4xl text-center text-4xl leading-[3rem] text-foreground lg:text-5xl lg:leading-[4rem]">
             I'm a full-stack developer, I love building things with
-            <div className={`${styles.placeholder} pl-1 text-red-500`}></div>
+            <span
+              className={`${styles.placeholder} block pl-1 text-red-500`}
+            ></span>
           </p>
         </div>
-        <div className="flex flex-col justify-center items-center text-red-500 gap-2 hover:text-red-400">
-          <h2 className="text-lg lg:text-xl">Projects</h2>
-          <div className="animate-bounce w-[1.7rem] lg:w-[2rem]">
-            <RxChevronDown size="100%" />
+        <a href="/#projects">
+          <div className="flex flex-col justify-center items-center text-red-500 gap-1 hover:text-red-400">
+            <h2 className="text-lg lg:text-xl">Projects</h2>
+            <div className="animate-bounce w-[1.7rem] lg:w-[2rem]">
+              <RxChevronDown size="100%" />
+            </div>
           </div>
-        </div>
+        </a>
       </section>
-      <section id="tmp" aria-labelledby="tmp" className="bg-red-400 h-screen">
-
+      <section id="projects" className="h-screen pt-7">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4 xl:gap-6 mx-1">
+          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate.
+          </ProjectCard>
+          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate.
+          </ProjectCard>
+          <ProjectCard title="Ft_trascendence" date="Sep - 2023" >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate. Quisquam
+              voluptates, cumque, voluptatem, quas quod quia voluptatum
+              consequatur quibusdam voluptas doloribus voluptate.
+          </ProjectCard>
+          </div>
       </section>
     </main>
   );
+  
+  
 }
