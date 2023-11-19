@@ -4,7 +4,9 @@ import ProjectCard from "./projectCard";
 
 export default function Home() {
   return (
-    <main className={`px-2 md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto ${styles.home}`}>
+    <main
+      className={`px-2 md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto ${styles.home}`}
+    >
       <section
         id="home"
         aria-labelledby="home"
@@ -32,50 +34,57 @@ export default function Home() {
       </section>
       <section id="projects" className="min-h-screen pt-7">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4 xl:gap-6 mx-1">
-          <ProjectCard title="Ft_trascendence" date="Sep - 2023" tech={["React", "TypeScript", "Next.js"]} >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate.
+          <ProjectCard
+            title="Ft_trascendence"
+            date="Sep - 2023"
+            tech={["React", "TypeScript", "Next.js"]}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
-          <ProjectCard title="Ft_irc" date="Sep - 2023" >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate.
+          <ProjectCard title="Ft_irc" date="Sep - 2023">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
-          <ProjectCard title="Cub3d" date="Sep - 2023" >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate. Quisquam
-              voluptates, cumque, voluptatem, quas quod quia voluptatum
-              consequatur quibusdam voluptas doloribus voluptate.
+          <ProjectCard title="Cub3d" date="Sep - 2023">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
-          </div>
+        </div>
       </section>
       <section id="contact" className="min-h-screen pt-7">
-        <form>
-          <div>
-            <label>Name</label>
-            <input type="text" placeholder="Full name" />
+        <form className="w-full flex gap-2">
+          <div className="w-full flex flex-col gap-1 flex-1">
+            <label className="text-gray-700 font-semibold">Name</label>
+            <input type="text" className="border-2 rounded-md h-10" />
           </div>
-          <div>
-            <label>Email</label>
-            <input type="text" placeholder="Full name" />
+          <div className="w-full flex flex-col gap-1">
+            <label className="text-gray-700 font-semibold">Email</label>
+            <input type="text" className="border-2 rounded-md h-10" />
           </div>
-          <div>
-            <label>Subject</label>
-            <input type="text" placeholder="Full name" />
+          <div className="w-full flex flex-col gap-1">
+            <label className="text-gray-700 font-semibold">Subject</label>
+            <input type="text" className="border-2 rounded-md h-10" />
           </div>
-          <div>
-            <label>Message</label>
-            <input type="text" placeholder="Full name" />
+          <div className="w-full flex flex-col gap-1">
+            <label className="text-gray-700 font-semibold">Message</label>
+            <input type="text" className="border-2 rounded-md h-10" />
           </div>
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            className="w-full border-2 rounded-md  font-semibold h-10 bg-white text-gray-700 hover:bg-gray-100 mt-2"
+          >
+            Submit
+          </button>
         </form>
       </section>
     </main>
   );
-  
-  
 }

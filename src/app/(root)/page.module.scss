@@ -16,7 +16,7 @@
   content: "";
   position: absolute;
   opacity: .3;
-  width:100px;
+  width:120px;
   height: 100vh;
   top: -50px;
   left: calc(50% - 50px);
@@ -26,23 +26,20 @@
 
 .home::before{
   background-color: blue;
-  animation: rotate 30s ease infinite;
+  animation: rotate 20s infinite;
 }
 
 .home::after{
   background-color: red;
-  animation: rotate 30s ease reverse infinite;
+  animation: rotate 20s reverse infinite;
 }
 
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-  50% {
-    transform: rotate(180deg);
-  }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 
