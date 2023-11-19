@@ -8,7 +8,7 @@ export default function Home() {
       <section
         id="home"
         aria-labelledby="home"
-        className="min-h-[calc(100vh-100px)] flex flex-col justify-center items-center gap-24"
+        className="min-h-[calc(100vh-80px)] flex flex-col justify-center items-center gap-24"
       >
         <div className="flex flex-col justify-center">
           <h1 className="text-lg text-center text-gray-700">
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </a>
       </section>
-      <section id="projects" className="h-screen pt-7">
+      <section id="projects" className="min-h-screen pt-7">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-4 xl:gap-6 mx-1">
           <ProjectCard title="Ft_trascendence" date="Sep - 2023" tech={["React", "TypeScript", "Next.js"]} >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -52,6 +52,27 @@ export default function Home() {
               consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
           </div>
+      </section>
+      <section id="contact" className="min-h-screen pt-7">
+        <form>
+          <div>
+            <label>Name</label>
+            <input type="text" placeholder="Full name" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="text" placeholder="Full name" />
+          </div>
+          <div>
+            <label>Subject</label>
+            <input type="text" placeholder="Full name" />
+          </div>
+          <div>
+            <label>Message</label>
+            <input type="text" placeholder="Full name" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </section>
     </main>
   );
