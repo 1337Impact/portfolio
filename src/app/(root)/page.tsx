@@ -57,29 +57,42 @@ export default function Home() {
             voluptates, cumque, voluptatem, quas quod quia voluptatum
             consequatur quibusdam voluptas doloribus voluptate.
           </ProjectCard>
+          <ProjectCard title="Ft_irc" date="Sep - 2023">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate.
+          </ProjectCard>
+          <ProjectCard title="Cub3d" date="Sep - 2023">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate. Quisquam
+            voluptates, cumque, voluptatem, quas quod quia voluptatum
+            consequatur quibusdam voluptas doloribus voluptate.
+          </ProjectCard>
         </div>
       </section>
-      <section id="contact" className="min-h-screen pt-7">
-        <form className="w-full flex gap-2">
-          <div className="w-full flex flex-col gap-1 flex-1">
-            <label className="text-gray-700 font-semibold">Name</label>
-            <input type="text" className="border-2 rounded-md h-10" />
+      <section id="contact" className="min-h-screen pt-7 flex flex-col items-start justify-center gap-3">
+        <h1 className="text-2xl text-gray-700 font-semibold underline decoration-2 decoration-gray-700 underline-offset-4">Let's work together:</h1>
+        <form className="w-full grid md:grid-cols-2 gap-4">
+          <div className="w-full grid gap-1">
+            <label className="text-gray-600 font-semibold">Name</label>
+            <input type="text" className="h-10 border-2 rounded-md border-gray-600 focus:outline-none p-2" />
           </div>
           <div className="w-full flex flex-col gap-1">
-            <label className="text-gray-700 font-semibold">Email</label>
-            <input type="text" className="border-2 rounded-md h-10" />
+            <label className="text-gray-600 font-semibold">Email</label>
+            <input type="text" className="h-10 border-2 rounded-md border-gray-600 focus:outline-none p-2" />
           </div>
-          <div className="w-full flex flex-col gap-1">
-            <label className="text-gray-700 font-semibold">Subject</label>
-            <input type="text" className="border-2 rounded-md h-10" />
+          <div className="w-full flex flex-col gap-1 md:col-span-2">
+            <label className="text-gray-600 font-semibold">Subject</label>
+            <input type="text" className="h-10 border-2 rounded-md border-gray-600 focus:outline-none p-2" />
           </div>
-          <div className="w-full flex flex-col gap-1">
-            <label className="text-gray-700 font-semibold">Message</label>
-            <input type="text" className="border-2 rounded-md h-10" />
+          <div className="w-full flex flex-col gap-1 md:col-span-2">
+            <label className="text-gray-600 font-semibold">Message</label>
+            <textarea className="h-32 border-2 rounded-md border-gray-600 focus:outline-none p-2" />
           </div>
           <button
             type="submit"
-            className="w-full border-2 rounded-md  font-semibold h-10 bg-white text-gray-700 hover:bg-gray-100 mt-2"
+            className="w-full border-2 rounded-md border-gray-600 font-semibold h-10 bg-white text-gray-600 hover:bg-gray-100 mt-2 md:col-span-2"
           >
             Submit
           </button>
