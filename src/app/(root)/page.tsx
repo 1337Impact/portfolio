@@ -71,8 +71,8 @@ export default function Home() {
           </ProjectCard>
         </div>
       </section>
-      <section id="contact" className="min-h-screen pt-7 flex flex-col items-start justify-center gap-3">
-        <h1 className="text-2xl text-gray-700 font-semibold underline decoration-2 decoration-gray-700 underline-offset-4">Let's work together:</h1>
+      <section id="contact" className="min-h-screen pt-7 flex flex-col items-center justify-center gap-6">
+        <h1 className="text-3xl text-gray-700 font-semibold underline decoration-2 decoration-gray-700 underline-offset-4">Let's work together:</h1>
         <form className="w-full grid md:grid-cols-2 gap-4">
           <div className="w-full grid gap-1">
             <label className="text-gray-600 font-semibold">Name</label>
