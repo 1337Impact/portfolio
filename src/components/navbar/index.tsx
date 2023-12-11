@@ -17,13 +17,13 @@ export default () => {
       </h1>
       <ul className="flex gap-4 flex-1 justify-end">
         <li className="">
-          <FaGithub class="text-xl lg:text-2xl" />
+          <FaGithub className="text-xl lg:text-2xl" />
         </li>
         <li>
-          <FaLinkedin class="text-xl lg:text-2xl" />
+          <FaLinkedin className="text-xl lg:text-2xl" />
         </li>
         <li>
-          <FaXTwitter class="text-xl lg:text-2xl" />
+          <FaXTwitter className="text-xl lg:text-2xl" />
         </li>
       </ul>
     </nav>
