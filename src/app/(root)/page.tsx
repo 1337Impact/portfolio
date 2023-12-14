@@ -1,3 +1,4 @@
+"use client";
 import styles from "./page.module.scss";
 import { RxChevronDown } from "react-icons/rx";
 import ProjectCard from "./projectCard";
@@ -13,13 +14,13 @@ export default function Home() {
         className="min-h-[calc(100vh-80px)] flex flex-col justify-center items-center gap-24"
       >
         <div className="flex flex-col justify-center">
-          <h1 className="text-lg text-center text-gray-700">
+          <h1 className="text-xl text-center text-gray-700 dark:text-slate-300">
             Hello I'm <span className="font-pacifico">Mohammed Benkhattab</span>
           </h1>
-          <p className="mt-1 max-w-4xl text-center text-4xl text-gray-800 leading-[3.2rem] text-foreground lg:text-5xl lg:leading-[4rem]">
+          <p className="mt-1 max-w-4xl text-center text-4xl text-gray-800 leading-[3.2rem] text-foreground lg:text-5xl lg:leading-[4rem] dark:text-slate-300">
             I'm a full-stack developer, I love building things with
             <span
-              className={`${styles.placeholder} block pl-1 text-red-500`}
+              className={`${styles.placeholder} block text-red-500`}
             ></span>
           </p>
         </div>

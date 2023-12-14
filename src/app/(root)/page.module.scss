@@ -21,7 +21,7 @@
   top: -50px;
   left: calc(50% - 50px);
   filter: blur(40px);
-  z-index: -1;
+  z-index: 1;
 }
 
 .home::before{

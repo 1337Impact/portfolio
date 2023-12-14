@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth' suppressHydrationWarning={true}>
-      <body suppressHydrationWarning={true} className={`${inter.className} bg-gray-100 `}>{children}</body>
+      <body suppressHydrationWarning={true} className={`${inter.className} bg-gray-100 dark:bg-gray-800`}>{children}</body>
     </html>
   )
 }

@@ -9,7 +9,7 @@
     position: absolute;
     width: 25px;
     height: 2.5px;
-    background-color: black;
+    background-color: currentColor;
     transition: all .3s ease;
     &:nth-child(1){
         top: 0;
