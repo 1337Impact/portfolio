@@ -1,9 +1,9 @@
-"use client";
 import styles from "./page.module.scss";
 import { RxChevronDown } from "react-icons/rx";
 import ProjectCard from "./projects/projectCard";
 import Projects from "./projects";
 import Link from "next/link";
+import Contact from "./contact";
 
 export default function Home() {
   return (
@@ -35,47 +35,7 @@ export default function Home() {
         </Link>
       </section>
       <Projects />
-      <section
-        id="contact"
-        className="flex min-h-screen flex-col items-center justify-center gap-6 pt-7"
-      >
-        <h1 className="text-3xl font-semibold text-gray-700 underline decoration-gray-700 decoration-2 underline-offset-4">
-          Let's work together:
-        </h1>
-        <form className="grid w-full gap-4 md:grid-cols-2">
-          <div className="grid w-full gap-1">
-            <label className="font-semibold text-gray-600">Name</label>
-            <input
-              type="text"
-              className="h-10 rounded-md border-2 border-gray-600 p-2 focus:outline-none"
-            />
-          </div>
-          <div className="flex w-full flex-col gap-1">
-            <label className="font-semibold text-gray-600">Email</label>
-            <input
-              type="text"
-              className="h-10 rounded-md border-2 border-gray-600 p-2 focus:outline-none"
-            />
-          </div>
-          <div className="flex w-full flex-col gap-1 md:col-span-2">
-            <label className="font-semibold text-gray-600">Subject</label>
-            <input
-              type="text"
-              className="h-10 rounded-md border-2 border-gray-600 p-2 focus:outline-none"
-            />
-          </div>
-          <div className="flex w-full flex-col gap-1 md:col-span-2">
-            <label className="font-semibold text-gray-600">Message</label>
-            <textarea className="h-32 rounded-md border-2 border-gray-600 p-2 focus:outline-none" />
-          </div>
-          <button
-            type="submit"
-            className="mt-2 h-10 w-full rounded-md border-2 border-gray-600 bg-white font-semibold text-gray-600 hover:bg-gray-100 md:col-span-2"
-          >
-            Submit
-          </button>
-        </form>
-      </section>
+      <Contact />
     </main>
   );
 }
