@@ -1,17 +1,5 @@
-import Link from "next/link";
+import {ProjectCardProps} from "@/types/project";
 import { HiOutlineExternalLink } from "react-icons/hi";
-
-interface Props {
-  title: string;
-  date: string;
-  image?: string;
-  link: string;
-  tech?: string[];
-  demo: string;
-  isVideo: boolean;
-  h: string;
-  children: React.ReactNode;
-}
 
 export default ({
   link,
@@ -22,7 +10,7 @@ export default ({
   demo,
   isVideo,
   h,
-}: Props) => {
+}: ProjectCardProps) => {
   return (
     <div
       className={`${h} group relative mx-auto mb-6 max-w-[600px] cursor-pointer overflow-hidden rounded-xl shadow-2xl lg:mb-8`}

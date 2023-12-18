@@ -1,0 +1,73 @@
+export default [
+  {
+    type: ["personal", "school"],
+    h: "h-[320px]",
+    title: "Ft_trascendence",
+    date: "Sep - 2023",
+    demo: "/demo/ft_transcendence_demo.mp4",
+    isVideo: true,
+    link: "#",
+    tech: ["TypeScript", "Next.js", "Nest.js", "Prisma", "PostgreSQL"],
+    children:
+      "Online multiplayer Pong with features like user authentication, matchmaking, chat, and leaderboards.",
+  },
+  {
+    type: ["personal"],
+    h: "h-[400px]",
+    title: "Leetbooks",
+    date: "Nov - 2023",
+    demo: "/demo/leetbooks_demo.mp4",
+    isVideo: true,
+    link: "https://github.com/1337Impact/LeetBooks",
+    tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "MantainUi"],
+    children:
+      "A platform for sharing and exchanging books. Built using Next.js and Prisma.",
+  },
+  {
+    type: ["school"],
+    h: "h-[360px]",
+    title: "Ft_irc",
+    date: "Apr - 2023",
+    demo: "/demo/ft_irc.webp",
+    isVideo: false,
+    link: "https://github.com/1337Impact/ft_irc",
+    tech: ["C++", "Linux Socket", "Networking", "IRC Protocol"],
+    children:
+      "An IRC server built from scratch in C++. The server follows the RFC 2812 specification and can be used with existing IRC clients.",
+  },
+  {
+    type: ["personal"],
+    h: "h-[400px]",
+    title: "TaskSpace",
+    date: "Nov - 2023",
+    demo: "/demo/taskspace_demo.mp4",
+    isVideo: true,
+    link: "https://github.com/1337Impact/TaskSpace",
+    tech: ["TypeScript", "Next.js", "prisma", "Trpc", "NextAuth.js"],
+    children: "A simple task management app built using Next.js and Trpc.",
+  },
+  {
+    type: ["school"],
+    h: "h-[360px]",
+    title: "Inception",
+    date: "2024",
+    demo: "/demo/inception.webp",
+    isVideo: false,
+    link: "https://github.com/your-username/inception",
+    tech: ["Docker", "Docker Compose", "Network", "System Administration"],
+    children:
+      "The project aims to create several docker containers from scratch, then orchestrate them with docker compose.",
+  },
+  {
+    type: ["school"],
+    h: "h-[320px]",
+    title: "Cub3d",
+    date: "2024",
+    demo: "/demo/cub3d_demo.mp4",
+    isVideo: true,
+    link: "https://github.com/your-username/cub3d",
+    tech: ["C", "MinilibX", "Ray-casting"],
+    children:
+      "A minimalist recreation the world-famous Wolfenstein 3D game in C using Ray-casting, and the MinilibX graphics library.",
+  },
+];

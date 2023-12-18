@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProjectCard from "./projectCard";
+import ProjectCard from "@/components/ProjectCard";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Projects() {

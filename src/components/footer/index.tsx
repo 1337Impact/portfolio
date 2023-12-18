@@ -42,36 +42,15 @@ export default () => {
             !isMenuOpen && "max-lg:hidden"
           }  z-30 max-lg:absolute max-lg:left-0 max-lg:top-[80px] max-lg:h-[calc(100vh-80px)] max-lg:w-full max-lg:backdrop-blur-xl`}
         >
-          <ul className="flex h-full items-center justify-around font-semibold max-lg:flex-col max-lg:text-3xl lg:gap-10">
+          <ul className="flex h-full items-center justify-around font-semibold max-lg:flex-col max-lg:text-3xl lg:gap-8">
             <Link href="/about">
-              <li
-                onClick={() => setIsMenuOpen(false)}
-                className={
-                  "cursor-pointer hover:text-slate-600 hover:underline hover:underline-offset-4"
-                }
-              >
-                Whoami
-              </li>
+              <li className={"cursor-pointer hover:text-slate-600"}>Whoami</li>
             </Link>
             <Link href="projects">
-              <li
-                onClick={() => setIsMenuOpen(false)}
-                className={
-                  "cursor-pointer hover:text-slate-600 hover:underline hover:underline-offset-4"
-                }
-              >
-                Projects
-              </li>
+              <li className={"cursor-pointer hover:text-slate-600"}>Projects</li>
             </Link>
             <Link href="/#contact">
-              <li
-                onClick={() => setIsMenuOpen(false)}
-                className={
-                  "cursor-pointer hover:text-slate-600 hover:underline hover:underline-offset-4"
-                }
-              >
-                Contact
-              </li>
+              <li className={"cursor-pointer hover:text-slate-600"}>Contact</li>
             </Link>
             <li>
               <ul className="flex justify-end gap-8 max-lg:flex-1 lg:hidden">
@@ -95,11 +74,7 @@ export default () => {
           </ul>
         </div>
         <div className="flex items-center gap-3">
-          <button
-            className="text-2xl hover:text-gray-600"
-            type="button"
-            onClick={toogleTheme}
-          >
+          <button className="text-2xl" type="button" onClick={toogleTheme}>
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
           <button
