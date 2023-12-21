@@ -18,17 +18,17 @@ export default function About() {
       <section className="mt-4 max-w-[500px] text-gray-700 dark:text-gray-400 tracking-wider">
         <h2 className="text-lg font-bold dark:text-gray-200 underline underline-offset-2">Journey.</h2>
         <p className="ml-1 mt-2">
-          I started learning programming in 2020, I've started with Python and
+          I started learning programming in 2020, I{"'"}ve started with Python and
           later got into web development with JavaScript and Django. Till this
           point It was all fun, working on project and learning new things. This
           will change when I joined 1337 school in 2021. Started working on
           project that where challenging and not all fun. memory leaks,
           segfaults and hiting your head to the wall for hours till you remember
           that you forgot a semi-colon in line 232. But looking back at it, it
-          was worth it and I'll do it again if I have to.
+          was worth it and I{"'"}ll do it again if I have to.
         </p>
         <p className="ml-1 mt-2">
-          Currently, I just finished my common core at 1337 school. I'm focusing
+          Currently, I just finished my common core at 1337 school. I{"'"}m focusing
           on learning new technologies and taking new challanges.
         </p>
       </section>

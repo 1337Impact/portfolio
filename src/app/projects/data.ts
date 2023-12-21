@@ -1,4 +1,4 @@
-export default [
+const ProjectsData =  [
   {
     type: ["school"],
     h: "h-[320px]",
@@ -118,3 +118,4 @@ export default [
       "Solution to the dining philosophers problem in C using threads and mutexes.",
   },
 ];
+export default ProjectsData;

@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
 
-export default () => {
+export default function Footer () {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const toogleMenue = () => {
@@ -27,7 +27,7 @@ export default () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-  });
+  }, []);
 
   return (
     <nav className="mx-4 h-[80px] w-[90%] text-slate-900 dark:text-slate-300 md:mx-auto lg:w-[80%] xl:w-[70%]">
