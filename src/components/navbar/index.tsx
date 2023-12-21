@@ -34,7 +34,7 @@ export default function Navbar () {
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
           <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 lg:text-[1.35rem]">
-            Benkhattab
+            Benkhattab.me
           </h1>
         </Link>
         <div

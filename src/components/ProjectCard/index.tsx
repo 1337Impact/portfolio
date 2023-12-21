@@ -23,7 +23,7 @@ export default function ProjectCard ({
             Your browser does not support the video tag.
           </video>
         ) : (
-          <Image width={100} height={100} src={demo} alt={title} className="h-full w-full object-cover" />
+          <img src={demo} alt={title} className="h-full w-full object-cover" />
         )}
       </div>
       <div className="absolute bottom-0  left-0 z-10 flex h-full w-full items-end p-6 duration-500 group-hover:opacity-100 lg:opacity-0">
