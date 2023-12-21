@@ -22,7 +22,7 @@ export default ({
             Your browser does not support the video tag.
           </video>
         ) : (
-          <img src={demo} alt={title} className="w-full" />
+          <img src={demo} alt={title} className="h-full w-full object-cover" />
         )}
       </div>
       <div className="absolute bottom-0  left-0 z-10 flex h-full w-full items-end p-6 duration-500 group-hover:opacity-100 lg:opacity-0">

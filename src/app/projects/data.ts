@@ -1,6 +1,6 @@
 export default [
   {
-    type: ["personal", "school"],
+    type: ["school"],
     h: "h-[320px]",
     title: "Ft_trascendence",
     date: "Sep - 2023",
@@ -24,6 +24,17 @@ export default [
       "A platform for sharing and exchanging books. Built using Next.js and Prisma.",
   },
   {
+    type: ["personal"],
+    h: "h-[320px]",
+    title: "Ip Address Tracker",
+    date: "Oct - 2023",
+    demo: "/demo/ip_adress_tracker.jpeg",
+    isVideo: false,
+    link: "https://github.com/1337Impact/Ip-Address-Tracker",
+    tech: ["TypeScript", "Vue.js", "Sass", "Leaflet.js"],
+    children: "An IP Address Tracking app. Built using Vue.js and Leaflet.js.",
+  },
+  {
     type: ["school"],
     h: "h-[360px]",
     title: "Ft_irc",
@@ -34,6 +45,18 @@ export default [
     tech: ["C++", "Linux Socket", "Networking", "IRC Protocol"],
     children:
       "An IRC server built from scratch in C++. The server follows the RFC 2812 specification and can be used with existing IRC clients.",
+  },
+  {
+    type: ["school"],
+    h: "h-[320px]",
+    title: "Push_swap",
+    date: "Apr - 2022",
+    demo: "/demo/push_swap_demo.mp4",
+    isVideo: true,
+    link: "https://github.com/1337Impact/push_swap",
+    tech: ["C", "Algorithms", "Sorting"],
+    children:
+      "This project involves sorting data on a stack, with a limited set of instructions, and the smallest number of moves.",
   },
   {
     type: ["personal"],
@@ -50,24 +73,48 @@ export default [
     type: ["school"],
     h: "h-[360px]",
     title: "Inception",
-    date: "2024",
+    date: "Jul - 2023",
     demo: "/demo/inception.webp",
     isVideo: false,
-    link: "https://github.com/your-username/inception",
+    link: "https://github.com/1337Impact/inception",
     tech: ["Docker", "Docker Compose", "Network", "System Administration"],
     children:
       "The project aims to create several docker containers from scratch, then orchestrate them with docker compose.",
   },
   {
+    type: ["personal"],
+    h: "h-[320px]",
+    title: "Advice Generator",
+    date: "Nov - 2023",
+    demo: "/demo/advice_generator.png",
+    isVideo: false,
+    link: "https://github.com/1337Impact/advice-generator",
+    tech: ["Html", "Css", "Javascript"],
+    children:
+      "Advice generator app that uses the Advice Slip API to generate random quotes of advice",
+  },
+  {
     type: ["school"],
     h: "h-[320px]",
     title: "Cub3d",
-    date: "2024",
+    date: "Nov - 2022",
     demo: "/demo/cub3d_demo.mp4",
     isVideo: true,
-    link: "https://github.com/your-username/cub3d",
+    link: "https://github.com/1337Impact/cub3d",
     tech: ["C", "MinilibX", "Ray-casting"],
     children:
       "A minimalist recreation the world-famous Wolfenstein 3D game in C using Ray-casting, and the MinilibX graphics library.",
+  },
+  {
+    type: ["school"],
+    h: "h-[360px]",
+    title: "Philosophers",
+    date: "Mar - 2022",
+    demo: "/demo/philosophers.png",
+    isVideo: false,
+    link: "https://github.com/1337Impact/philosophers_42",
+    tech: ["C", "Algorithms", "Threading"],
+    children:
+      "Solution to the dining philosophers problem in C using threads and mutexes.",
   },
 ];
