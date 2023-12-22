@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning={true}>
+      <head>
+        <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
+      </head>
       <body
         suppressHydrationWarning={true}
         className={`${inter.className} bg-gray-100 dark:bg-gray-800`}
