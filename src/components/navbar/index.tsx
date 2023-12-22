@@ -5,11 +5,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
 
-export default function Navbar () {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const toogleMenue = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.classList.toggle('prevent-scroll');
   };
 
   const toogleTheme = () => {
@@ -120,4 +121,4 @@ export default function Navbar () {
       </div>
     </nav>
   );
-};
+}
