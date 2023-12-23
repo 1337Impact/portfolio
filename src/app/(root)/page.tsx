@@ -7,9 +7,7 @@ import Contact from "./contact";
 
 export default function Home() {
   return (
-    <main
-      className={`mx-auto px-4 md:w-[90%] lg:w-[80%] xl:w-[70%] ${styles.home}`}
-    >
+    <main className={`mx-auto w-[90%] lg:w-[80%] xl:w-[70%] ${styles.home}`}>
       <section
         id="home"
         aria-labelledby="home"
@@ -17,9 +15,10 @@ export default function Home() {
       >
         <div className="flex flex-col justify-center">
           <h1 className="text-center text-xl text-gray-700 dark:text-slate-300">
-            Hello I{"'"}m <span className="font-pacifico">Mohammed Benkhattab</span>
+            Hello I{"'"}m{" "}
+            <span className="font-pacifico">Mohammed Benkhattab</span>
           </h1>
-          <p className="text-foreground mt-1 max-w-4xl text-center text-4xl font-medium leading-[3.2rem] text-gray-800 dark:text-slate-300 lg:text-5xl lg:leading-[4rem]">
+          <p className="text-foreground mt-1 max-w-4xl text-center text-4xl font-medium leading-[3.2rem] text-gray-800 lg:text-5xl lg:leading-[4rem] dark:text-slate-300">
             I{"'"}m a full-stack developer, I love building things with
             <span className={`${styles.placeholder} block text-red-500`}></span>
           </p>

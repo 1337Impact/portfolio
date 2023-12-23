@@ -4,7 +4,7 @@ const ProjectsData =  [
     h: "h-[320px]",
     title: "Ft_trascendence",
     date: "Sep - 2023",
-    demo: "/demo/ft_transcendence_demo.mp4",
+    demo: "https://utfs.io/f/d40b31b6-64b2-4d4a-8709-fbe653edfc36-eseyjc.mp4",
     isVideo: true,
     link: "#",
     tech: ["TypeScript", "Next.js", "Nest.js", "Prisma", "PostgreSQL"],
