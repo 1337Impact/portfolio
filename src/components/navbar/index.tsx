@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from "./navbar.module.scss";
@@ -10,7 +10,6 @@ export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const toogleMenue = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.classList.toggle('prevent-scroll');
   };
 
   const toogleTheme = () => {
@@ -29,21 +28,29 @@ export default function Navbar() {
       document.documentElement.classList.remove("dark");
     }
   }, []);
+  
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('max-md:overflow-y-hidden');
+    }else{
+      document.body.classList.remove('max-md:overflow-y-hidden');
+    }
+  }, [isMenuOpen]);  
 
   return (
-    <nav className="mx-4 h-[80px] w-[90%] text-slate-900 dark:text-slate-300 md:mx-auto lg:w-[80%] xl:w-[70%]">
+    <nav className="mx-auto h-[80px] w-[90%] text-slate-900 dark:text-slate-300 lg:w-[80%] xl:w-[70%]">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
-          <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 lg:text-[1.35rem]">
+          <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 md:text-[1.35rem]">
             Benkhattab.me
           </h1>
         </Link>
         <div
           className={`${
-            !isMenuOpen && "max-lg:hidden"
-          }  z-30 max-lg:absolute max-lg:left-0 max-lg:top-[80px] max-lg:h-[calc(100vh-80px)] max-lg:w-full max-lg:backdrop-blur-xl`}
+            !isMenuOpen && "max-md:hidden"
+          }  z-30 max-md:absolute max-md:left-0 max-md:top-[80px] max-md:h-[calc(100vh-80px)] max-md:w-full max-md:backdrop-blur-xl`}
         >
-          <ul className="flex h-full items-center justify-around font-semibold max-lg:flex-col max-lg:text-3xl lg:gap-10">
+          <ul className="flex h-full items-center justify-around font-semibold max-md:flex-col max-md:text-3xl md:gap-10">
             <Link href="/about">
               <li
                 onClick={() => setIsMenuOpen(false)}
@@ -75,7 +82,7 @@ export default function Navbar() {
               </li>
             </Link>
             <li>
-              <ul className="flex justify-end gap-8 max-lg:flex-1 lg:hidden">
+              <ul className="flex justify-end gap-8 max-md:flex-1 md:hidden">
                 <li className="cursor-pointer text-2xl">
                   <a>
                     <FaGithub />
@@ -104,7 +111,7 @@ export default function Navbar() {
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
           <button
-            className={`${styles.hamburger} lg:hidden`}
+            className={`${styles.hamburger} md:hidden`}
             onClick={toogleMenue}
           >
             <div
