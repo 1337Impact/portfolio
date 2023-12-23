@@ -1,5 +1,7 @@
+"use client";
 import {ProjectCardProps} from "@/types/project";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 export default function ProjectCard ({
@@ -12,9 +14,24 @@ export default function ProjectCard ({
   isVideo,
   h,
 }: ProjectCardProps) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const io = new IntersectionObserver((entries, observer) => {
+      console.log(entries);
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-loadProject");
+          observer.disconnect();
+        }
+      });
+    });
+  
+    io.observe(ref.current as any);
+  }, []);
   return (
     <div
-      className={`${h} group relative mx-auto mb-6 max-w-[600px] cursor-pointer overflow-hidden rounded-xl shadow-2xl lg:mb-8`}
+    ref={ref}
+      className={`${h} opacity-0 group relative mx-auto mb-6 max-w-[600px] cursor-pointer overflow-hidden rounded-xl shadow-2xl lg:mb-8`}
     >
       <div className="h-full w-full">
         {isVideo ? (

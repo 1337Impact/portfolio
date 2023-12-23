@@ -12,6 +12,15 @@ const config: Config = {
       fontFamily: {
         pacifico: ['pacifico', 'cursive'],
         manrope: ['Manrope', 'sans-serif'],
+      },
+      keyframes: {
+        load: {
+          'from': { transform: 'translateY(2rem)', opacity: "0" },
+          'to': { transform: 'translateX(0)', opacity: "1" },
+        }
+      },
+      animation: {
+        loadProject: 'load 1s ease-in-out forwards',
       }
     },
   },
