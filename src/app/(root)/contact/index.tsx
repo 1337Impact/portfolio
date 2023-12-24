@@ -2,10 +2,10 @@ export default function Contact() {
   return (
     <section
     id="contact"
-    className="flex min-h-screen flex-col items-center justify-center gap-6 pt-7 "
+    className="flex min-h-screen flex-col items-start justify-center gap-6 pt-7 "
   >
-    <h1 className="text-3xl text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-300">
-      Let{"'"}s work together:
+    <h1 className="text-4xl text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-300">
+      Let{"'"}s work together.
     </h1>
     <form className="grid w-full gap-4 md:grid-cols-2 text-gray-700 dark:text-gray-200 font-semibold">
       <div className="grid w-full gap-1">

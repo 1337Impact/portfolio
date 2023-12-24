@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,10 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${inter.className} bg-gray-100 dark:bg-gray-800`}
       >
-        <div className="font-manrope font-normal overflow-x-hidden">
+        <div className="relative font-manrope font-normal overflow-x-hidden">
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
