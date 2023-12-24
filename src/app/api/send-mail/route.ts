@@ -2,17 +2,17 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
-    host: "smtp.postmarkapp.com",
-    port: 25,
+    host: process.env.SMTP_HOST as string,
+    port: 465,
     secure: true,
     auth: {
-      user: "158609e6-a51d-416f-93ae-2491232c355a",
-      pass: "158609e6-a51d-416f-93ae-2491232c355a",
+      user: process.env.SMTP_EMAIL,
+      pass: process.env.SMTP_PASS,
     },
   });
   const info = await transporter.sendMail({
-    from: '"mohammed" <158609e6-a51d-416f-93ae-2491232c355a>',
-    to: "mbenkhat@student.1337.ma",
+    from: process.env.SMTP_EMAIL,
+    to: "mobenkhattab@gmail.com",
     subject: "Hello ✔",
     text: "Hello world?",
     html: "<b>Hello world?</b>",
