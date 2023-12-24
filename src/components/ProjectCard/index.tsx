@@ -17,7 +17,6 @@ export default function ProjectCard ({
   const ref = useRef(null);
   useEffect(() => {
     const io = new IntersectionObserver((entries, observer) => {
-      console.log(entries);
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-loadProject");

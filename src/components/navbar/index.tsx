@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from "./navbar.module.scss";
@@ -15,30 +15,38 @@ export default function Navbar() {
   const toogleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    document.documentElement.classList.toggle("dark");
     localStorage.setItem("Theme", newTheme);
   };
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("Theme");
-    localTheme && setTheme(localTheme);
-    if (localTheme === "dark") {
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
+  }, [theme]);
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("Theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    } else {
+      window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches &&
+        setTheme("dark");
+    }
   }, []);
-  
+
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('max-md:overflow-y-hidden');
-    }else{
-      document.body.classList.remove('max-md:overflow-y-hidden');
+      document.body.classList.add("max-md:overflow-y-hidden");
+    } else {
+      document.body.classList.remove("max-md:overflow-y-hidden");
     }
-  }, [isMenuOpen]);  
+  }, [isMenuOpen]);
 
   return (
-    <nav className="mx-auto h-[80px] w-[90%] text-slate-900 dark:text-slate-300 lg:w-[80%] xl:w-[70%]">
+    <nav className="mx-auto h-[80px] w-[90%] text-slate-900 lg:w-[80%] xl:w-[70%] dark:text-slate-300">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
           <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 md:text-[1.35rem]">
