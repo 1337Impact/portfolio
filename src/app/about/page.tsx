@@ -3,7 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function About() {
   return (
-    <main className="mx-4 my-7 flex flex-col gap-6 md:mx-auto md:my-20 md:w-[90%] md:items-center md:text-center lg:w-[80%] xl:w-[70%]">
+    <main className="m-container my-7 flex flex-col gap-6 md:my-20 md:items-center md:text-center">
       <h1 className="text-4xl font-semibold text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-100">
         About me
       </h1>
@@ -36,17 +36,21 @@ export default function About() {
           focusing on learning new technologies and taking new challanges.
         </p>
       </section>
-      <section className="text-gray-700 dark:text-gray-400 tracking-wider max-w-[500px]">
-        <h2 className="text-lg font-bold dark:text-gray-200 underline underline-offset-2">Beyond.</h2>
-        <p className="ml-1 mt-1">
-          
-        </p>
+      <section className="max-w-[500px] tracking-wider text-gray-700 dark:text-gray-400">
+        <h2 className="text-lg font-bold underline underline-offset-2 dark:text-gray-200">
+          Beyond.
+        </h2>
+        <p className="ml-1 mt-1"></p>
         <p className="ml-1 mt-1">
           Currently, I just finished my common core at 1337 school. I'm focusing
-          on learning new technologies and take on new challanges. Sounds intersting?{" "}
-          <Link href="/#contact" className="font-medium underline hover:text-gray-700 ">
+          on learning new technologies and take on new challanges. Sounds
+          intersting?{" "}
+          <Link
+            href="/#contact"
+            className="font-medium underline hover:text-gray-700 "
+          >
             Contact me.
-            </Link>
+          </Link>
         </p>
       </section>
     </main>

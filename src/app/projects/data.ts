@@ -4,12 +4,13 @@ const ProjectsData =  [
     h: "h-[320px]",
     title: "Ft_trascendence",
     date: "Sep - 2023",
-    demo: "https://utfs.io/f/d40b31b6-64b2-4d4a-8709-fbe653edfc36-eseyjc.mp4",
+    demo: "/demo/ft_transcendence_demo.mp4",
     isVideo: true,
-    link: "#",
+    placeholderImg: "/demo/placeholders/ft_trascendence.png",
+    link: "https://github.com/1337Impact/ft_transcendence",
     tech: ["TypeScript", "Next.js", "Nest.js", "Prisma", "PostgreSQL"],
     children:
-      "Online multiplayer Pong with features like user authentication, matchmaking, chat, and leaderboards.",
+    "Online multiplayer Pong with features like user authentication, matchmaking, chat, and leaderboards.",
   },
   {
     type: ["personal"],
@@ -18,6 +19,7 @@ const ProjectsData =  [
     date: "Nov - 2023",
     demo: "/demo/leetbooks_demo.mp4",
     isVideo: true,
+    placeholderImg: "/demo/placeholders/leetbooks.png",
     link: "https://github.com/1337Impact/LeetBooks",
     tech: ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "MantainUi"],
     children:
@@ -53,6 +55,7 @@ const ProjectsData =  [
     date: "Apr - 2022",
     demo: "/demo/push_swap_demo.mp4",
     isVideo: true,
+    placeholderImg: "/demo/placeholders/push_swap.png",
     link: "https://github.com/1337Impact/push_swap",
     tech: ["C", "Algorithms", "Sorting"],
     children:
@@ -65,6 +68,7 @@ const ProjectsData =  [
     date: "Nov - 2023",
     demo: "/demo/taskspace_demo.mp4",
     isVideo: true,
+    placeholderImg: "/demo/placeholders/taskspace.png",
     link: "https://github.com/1337Impact/TaskSpace",
     tech: ["TypeScript", "Next.js", "prisma", "Trpc", "NextAuth.js"],
     children: "A simple task management app built using Next.js and Trpc.",
@@ -100,6 +104,7 @@ const ProjectsData =  [
     date: "Nov - 2022",
     demo: "/demo/cub3d_demo.mp4",
     isVideo: true,
+    placeholderImg: "/demo/placeholders/cub3d.jpeg",
     link: "https://github.com/1337Impact/cub3d",
     tech: ["C", "MinilibX", "Ray-casting"],
     children:

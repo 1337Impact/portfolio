@@ -7,11 +7,11 @@ import Contact from "./contact";
 
 export default function Home() {
   return (
-    <main className={`mx-auto w-[90%] lg:w-[80%] xl:w-[70%] ${styles.home}`}>
+    <main className={`m-container w-[90%] ${styles.home}`}>
       <section
         id="home"
         aria-labelledby="home"
-        className="scroll-m-[80px] flex min-h-[calc(100vh-80px)] flex-col items-center justify-center gap-24"
+        className="flex min-h-[calc(100vh-80px)] scroll-m-[80px] flex-col items-center justify-center gap-24"
       >
         <div className="flex flex-col justify-center">
           <h1 className="text-center text-xl text-gray-700 dark:text-slate-300">

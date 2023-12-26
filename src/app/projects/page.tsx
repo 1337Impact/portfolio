@@ -18,7 +18,7 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <main className="mx-4 my-7 md:mx-auto md:my-20 md:w-[90%] lg:w-[80%] xl:w-[70%]">
+    <main className="m-container my-7 md:my-20">
       <h1 className="text-4xl font-semibold text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-100">
         Projects.
       </h1>
@@ -27,7 +27,7 @@ export default function Projects() {
           className={`rounded-lg border-2 border-gray-600 px-3 py-[1px] text-sm font-semibold dark:border-gray-200 ${
             selected === "all"
               ? "bg-gray-600 text-gray-100 dark:bg-gray-100 dark:text-gray-800"
-              : "text-gray-600 dark:text-gray-200"
+              : "text-gray-600 hover:bg-gray-200 dark:text-gray-200 dark:hover:bg-gray-700"
           }`}
           onClick={() => setSelected("all")}
         >
@@ -37,7 +37,7 @@ export default function Projects() {
           className={`rounded-lg border-2 border-gray-600 px-3 py-[1px] text-sm font-semibold dark:border-gray-200 ${
             selected === "school"
               ? "bg-gray-600 text-gray-100 dark:bg-gray-100 dark:text-gray-800"
-              : "text-gray-600 dark:text-gray-200"
+              : "text-gray-600 hover:bg-gray-200 dark:text-gray-200 dark:hover:bg-gray-700"
           }`}
           onClick={() => setSelected("school")}
         >
@@ -47,7 +47,7 @@ export default function Projects() {
           className={`rounded-lg border-2 border-gray-600 px-3 py-[1px] text-sm font-semibold dark:border-gray-200 ${
             selected === "personal"
               ? "bg-gray-600 text-gray-100 dark:bg-gray-100 dark:text-gray-800"
-              : "text-gray-600 dark:text-gray-200"
+              : "text-gray-600 hover:bg-gray-200 dark:text-gray-200 dark:hover:bg-gray-700"
           }`}
           onClick={() => setSelected("personal")}
         >

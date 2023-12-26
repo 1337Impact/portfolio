@@ -8,3 +8,9 @@
   :root {
   }
 }
+
+@layer components {
+  .m-container {
+    @apply mx-auto  w-[90%] lg:w-[80%] xl:w-[70%] max-w-[1200px];
+  }
+}

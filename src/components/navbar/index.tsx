@@ -46,7 +46,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="mx-auto h-[80px] w-[90%] text-slate-900 lg:w-[80%] xl:w-[70%] dark:text-slate-300">
+    <nav className="h-[80px] text-slate-900 m-container dark:text-slate-300">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
           <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 md:text-[1.35rem]">

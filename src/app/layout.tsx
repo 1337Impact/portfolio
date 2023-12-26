@@ -25,7 +25,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${inter.className} bg-gray-100 dark:bg-gray-800`}
       >
-        <div className="relative font-manrope font-normal overflow-x-hidden">
+        <div className="min-h-screen relative font-manrope font-normal overflow-x-hidden">
           <Navbar />
           {children}
           <Footer />

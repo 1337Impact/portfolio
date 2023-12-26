@@ -36,10 +36,6 @@ export default function ProjectCard ({
     >
       <div className="h-full w-full">
         {isVideo ? (
-          // <video className="h-full w-full object-cover" autoPlay loop muted>
-          //   <source src={demo} type="video/mp4" />
-          //   Your browser does not support the video tag.
-          // </video>
           <VideoDemo demo={demo} placeholderImg={placeholderImg} />
         ) : (
           <img src={demo} alt={title} className="h-full w-full object-cover" />
@@ -49,7 +45,7 @@ export default function ProjectCard ({
         <a
           target="_blank"
           href={link}
-          className="absolute right-5 top-4 text-3xl text-gray-200"
+          className="absolute right-5 top-4 text-3xl text-gray-200 hover:text-gray-50"
         >
           <HiOutlineExternalLink />
         </a>
@@ -70,7 +66,7 @@ export default function ProjectCard ({
                 tech.map((item, index) => (
                   <li
                     key={index}
-                    className="inline-block rounded-full border-[1.5px] border-gray-200 px-3 py-[2.5px] text-xs font-bold text-gray-400"
+                    className="inline-block rounded-full border-[1.5px] border-gray-200 px-3 py-[2.5px] text-xs font-bold text-gray-400 hover:text-gray-200"
                   >
                     {item}
                   </li>
