@@ -54,7 +54,7 @@ export default function Projects() {
           Personal
         </button>
       </div>
-      <div className="mt-6 gap-8 lg:columns-2">
+      <div className="mt-10 gap-10 lg:columns-2">
         {data.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

@@ -1,11 +1,11 @@
 "use client";
-import {ProjectCardProps} from "@/types/project";
+import { ProjectCardProps } from "@/types/project";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import VideoDemo from "./VideoDemo";
 
-export default function ProjectCard ({
+export default function ProjectCard({
   link,
   title,
   date,
@@ -26,13 +26,13 @@ export default function ProjectCard ({
         }
       });
     });
-  
+
     io.observe(ref.current as any);
   }, []);
   return (
     <div
-    ref={ref}
-      className={`${h} opacity-0 group relative mx-auto mb-6 max-w-[600px] cursor-pointer overflow-hidden rounded-xl shadow-2xl lg:mb-8`}
+      ref={ref}
+      className={`${h} group relative mx-auto mb-6 max-w-[600px] cursor-pointer overflow-hidden rounded-xl opacity-0 shadow-2xl md:mb-10 lg:mb-8`}
     >
       <div className="h-full w-full">
         {isVideo ? (
@@ -77,4 +77,4 @@ export default function ProjectCard ({
       </div>
     </div>
   );
-};
+}
