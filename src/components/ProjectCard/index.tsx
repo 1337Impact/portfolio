@@ -3,6 +3,7 @@ import {ProjectCardProps} from "@/types/project";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import VideoDemo from "./VideoDemo";
 
 export default function ProjectCard ({
   link,
@@ -11,6 +12,7 @@ export default function ProjectCard ({
   tech,
   children,
   demo,
+  placeholderImg,
   isVideo,
   h,
 }: ProjectCardProps) {
@@ -34,10 +36,11 @@ export default function ProjectCard ({
     >
       <div className="h-full w-full">
         {isVideo ? (
-          <video className="h-full w-full object-cover" autoPlay loop muted>
-            <source src={demo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          // <video className="h-full w-full object-cover" autoPlay loop muted>
+          //   <source src={demo} type="video/mp4" />
+          //   Your browser does not support the video tag.
+          // </video>
+          <VideoDemo demo={demo} placeholderImg={placeholderImg} />
         ) : (
           <img src={demo} alt={title} className="h-full w-full object-cover" />
         )}

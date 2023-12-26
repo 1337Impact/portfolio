@@ -11,7 +11,7 @@ export default function Home() {
       <section
         id="home"
         aria-labelledby="home"
-        className="flex min-h-[calc(100vh-80px)] flex-col items-center justify-center gap-24"
+        className="scroll-m-[80px] flex min-h-[calc(100vh-80px)] flex-col items-center justify-center gap-24"
       >
         <div className="flex flex-col justify-center">
           <h1 className="text-center text-xl text-gray-700 dark:text-slate-300">

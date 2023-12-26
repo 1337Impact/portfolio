@@ -12,7 +12,7 @@ export default function Projects() {
       </Link>
       <p className="mt-1 text-sm text-gray-600 opacity-80 dark:text-gray-200">
         A selection of my most recent{" "}
-        <Link className="underline hover:text-gray-700" href="/projects">
+        <Link className="font-medium underline hover:text-gray-700" href="/projects">
           projects
         </Link>
         .

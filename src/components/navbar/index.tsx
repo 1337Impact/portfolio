@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaMoon, FaSun } from "react-icons/fa";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
+import MediaLinks from "../MediaLinks";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +69,7 @@ export default function Navbar() {
                 Whoami
               </li>
             </Link>
-            <Link href="projects">
+            <Link href="/projects">
               <li
                 onClick={() => setIsMenuOpen(false)}
                 className={
@@ -90,23 +90,9 @@ export default function Navbar() {
               </li>
             </Link>
             <li>
-              <ul className="flex justify-end gap-8 max-md:flex-1 md:hidden">
-                <li className="cursor-pointer text-2xl">
-                  <a>
-                    <FaGithub />
-                  </a>
-                </li>
-                <li className="cursor-pointer text-2xl">
-                  <a>
-                    <FaLinkedin />
-                  </a>
-                </li>
-                <li className="cursor-pointer text-2xl">
-                  <a>
-                    <FaXTwitter />
-                  </a>
-                </li>
-              </ul>
+              <div className="md:hidden">
+                <MediaLinks size="2xl" />
+              </div>
             </li>
           </ul>
         </div>

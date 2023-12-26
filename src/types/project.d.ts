@@ -5,6 +5,7 @@ export interface ProjectCardProps {
     link: string;
     tech?: string[];
     demo: string;
+    placeholderImg?: string;
     isVideo: boolean;
     h: string;
     children: React.ReactNode;
