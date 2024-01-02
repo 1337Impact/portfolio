@@ -7,12 +7,12 @@ export default function MediaLinks({ size }: { size?: string }) {
     <ul
       className={`text-${size} flex h-full items-center justify-center gap-5 lg:mb-7 lg:gap-7`}
     >
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a target="_blank" href="https://github.com/1337Impact">
           <FaGithub />
         </a>
       </li>
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a
           target="_blank"
           href="https://www.linkedin.com/in/mohammed-benkhattab/"
@@ -20,12 +20,12 @@ export default function MediaLinks({ size }: { size?: string }) {
           <FaLinkedinIn />
         </a>
       </li>
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a target="_blank" href="">
           <FaXTwitter />
         </a>
       </li>
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a
           target="_blank"
           href="https://www.frontendmentor.io/profile/Mohamaedbenk"
@@ -33,7 +33,7 @@ export default function MediaLinks({ size }: { size?: string }) {
           <SiFrontendmentor />
         </a>
       </li>
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a
           target="_blank"
           href="https://www.hackerrank.com/profile/mobenkhattab"
@@ -41,7 +41,7 @@ export default function MediaLinks({ size }: { size?: string }) {
           <SiHackerrank />
         </a>
       </li>
-      <li className="transition-all duration-200 ease-in hover:scale-125 hover:text-gray-50">
+      <li className="transition-all duration-100 ease-in hover:scale-110">
         <a
           target="_blank"
           href="https://www.instagram.com/mohammed_benkhattab/"

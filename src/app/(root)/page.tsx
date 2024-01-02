@@ -1,9 +1,9 @@
 import styles from "./page.module.scss";
 import { RxChevronDown } from "react-icons/rx";
-import ProjectCard from "../../components/ProjectCard";
 import Projects from "./projects";
 import Link from "next/link";
 import Contact from "./contact";
+import { useEffect } from "react";
 
 export default function Home() {
   return (

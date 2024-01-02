@@ -36,7 +36,10 @@ export default function ProjectCard({
     >
       <div className="h-full w-full">
         {isVideo ? (
-          <VideoDemo demo={demo} placeholderImg={placeholderImg} />
+          <video className={"h-full w-full object-cover"} autoPlay loop muted>
+            <source src={demo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         ) : (
           <img src={demo} alt={title} className="h-full w-full object-cover" />
         )}
