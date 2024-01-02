@@ -6,6 +6,15 @@ import Link from "next/link";
 import MediaLinks from "../MediaLinks";
 
 export default function Navbar() {
+  const localTheme = localStorage.getItem("Theme");
+  if (localTheme) {
+    if (localTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const toogleMenue = () => {
