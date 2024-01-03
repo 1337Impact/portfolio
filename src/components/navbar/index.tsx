@@ -55,7 +55,7 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="h-[80px] text-slate-900 m-container dark:text-slate-300">
+    <nav className="m-container h-[80px] text-slate-900 dark:text-slate-300">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
           <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 md:text-[1.35rem]">
@@ -107,11 +107,13 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-3">
           <button
-            className="text-2xl hover:text-gray-600"
+            className="text-2xl hover:text-gray-600 md:w-[100px]"
             type="button"
             onClick={toogleTheme}
           >
-            {theme === "dark" ? <FaSun /> : <FaMoon />}
+            <div className="float-right">
+              {theme === "dark" ? <FaSun /> : <FaMoon />}
+            </div>
           </button>
           <button
             className={`${styles.hamburger} md:hidden`}

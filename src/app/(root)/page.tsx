@@ -3,7 +3,6 @@ import { RxChevronDown } from "react-icons/rx";
 import Projects from "./projects";
 import Link from "next/link";
 import Contact from "./contact";
-import { useEffect } from "react";
 
 export default function Home() {
   return (
