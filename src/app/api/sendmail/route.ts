@@ -14,9 +14,11 @@ export async function POST(request: Request) {
       subject: body.subject,
       text: `by: "${body.name}"\n${body.message}`,
     });
+    console.log("info:", info);
     
     return Response.json({ message: "success" });
   } catch (e) {
+    console.log("Error:", e);
     return new Response("Bad Request", { status: 400 });
   }
 }
