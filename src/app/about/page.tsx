@@ -3,11 +3,11 @@ import ProjectCard from "@/components/ProjectCard";
 
 export default function About() {
   return (
-    <main className="m-container my-7 flex flex-col gap-6 md:my-20 md:items-center md:text-center">
-      <h1 className="text-4xl font-semibold text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-100">
-        About me
+    <main className="m-container my-5 flex flex-col gap-6 md:my-20">
+      <h1 className="text-3xl md:text-4xl font-semibold text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-100">
+        About me.
       </h1>
-      <section className="max-w-[500px] tracking-wider text-gray-700 dark:text-gray-400">
+      <section className="max-w-[700px] tracking-wider text-gray-700 dark:text-gray-400">
         <h2 className="text-lg font-bold underline underline-offset-2 dark:text-gray-200">
           Whoami.
         </h2>
@@ -17,7 +17,7 @@ export default function About() {
           developer.
         </p>
       </section>
-      <section className="max-w-[500px] tracking-wider text-gray-700 dark:text-gray-400">
+      <section className="max-w-[700px] tracking-wider text-gray-700 dark:text-gray-400">
         <h2 className="text-lg font-bold underline underline-offset-2 dark:text-gray-200">
           Journey.
         </h2>
@@ -36,7 +36,7 @@ export default function About() {
           focusing on learning new technologies and taking new challanges.
         </p>
       </section>
-      <section className="max-w-[500px] tracking-wider text-gray-700 dark:text-gray-400">
+      <section className="max-w-[700px] tracking-wider text-gray-700 dark:text-gray-400">
         <h2 className="text-lg font-bold underline underline-offset-2 dark:text-gray-200">
           Beyond.
         </h2>

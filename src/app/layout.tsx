@@ -24,7 +24,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning={true}
-        className={`${inter.className} bg-gray-100 dark:bg-gray-800`}
+        className={`${inter.className} bg-gray-200 dark:bg-gray-800`}
       >
         <NextThemeProvider>
           <div className="relative min-h-screen overflow-x-hidden font-manrope font-normal">

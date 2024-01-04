@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="m-container h-[80px] text-slate-900 dark:text-slate-300">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
-          <h1 className="cursor-pointer text-center font-pacifico text-xl hover:text-gray-400 md:text-[1.35rem]">
+          <h1 className="cursor-pointer text-center font-pacifico text-xl md:text-[1.35rem]">
             Benkhattab.me
           </h1>
         </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 Projects
               </li>
             </Link>
-            <Link href="/#contact">
+            <Link href="/contact">
               <li
                 onClick={() => setIsMenuOpen(false)}
                 className={

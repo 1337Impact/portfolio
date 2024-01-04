@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import { RxChevronDown } from "react-icons/rx";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import Projects from "./projects";
 import Link from "next/link";
 import Contact from "./contact";
@@ -10,30 +10,62 @@ export default function Home() {
       <section
         id="home"
         aria-labelledby="home"
-        className="flex min-h-[calc(100vh-80px)] scroll-m-[80px] flex-col items-center justify-center gap-24"
+        className="pt-20 pb-10 flex scroll-m-[80px] flex-col gap-4"
       >
-        <div className="flex flex-col justify-center">
-          <h1 className="text-center text-xl text-gray-700 dark:text-slate-300">
-            Hello I{"'"}m{" "}
-            <span className="font-pacifico">Mohammed Benkhattab</span>
-          </h1>
-          <p className="text-foreground mt-1 max-w-4xl text-center text-3xl font-medium leading-[3.2rem] text-gray-800 lg:text-5xl lg:leading-[4rem] dark:text-slate-300">
-            I{"'"}m a full-stack developer, I love building things with
-            <span className={`${styles.placeholder} block text-red-500`}></span>
+        <h1 className="text-4xl text-gray-800 underline underline-offset-[3px] dark:text-slate-200">
+          I'M Mohammed Benkhattab.
+        </h1>
+        <div className="flex max-w-4xl flex-col gap-1 font-semibold leading-6 text-gray-600 lg:leading-8 dark:text-slate-400">
+          <p>
+            A Software developer, designer and tech enthusiast specialized in
+            web development.
           </p>
-        </div>
-        <Link
-          href="#projects"
-          className="flex cursor-pointer flex-col items-center justify-center gap-1 text-red-500 hover:text-red-400"
-        >
-          <h2 className="text-lg font-medium lg:text-xl">Projects</h2>
-          <div className="w-[1.7rem] animate-bounce lg:w-[2rem]">
-            <RxChevronDown size="100%" />
+          <p>
+            Currently I'm studying Software engineering at{" "}
+            <a
+              className="text-red-500 underline hover:text-red-400"
+              href="https://1337.ma/1337.ma"
+            >
+              1337 FIL
+            </a>{" "}
+            ,a Computer Science School located in Khouribga, part of 42 Network and Um6p
+            University.
+          </p>
+          <p>
+            I like building things using{" "}
+            <span className="text-red-500">Python</span>,{" "}
+            <span className="text-red-500">TypeScript</span> and{" "}
+            <span className="text-red-500">React</span>.
+          </p>
+          <p>
+            When I’m not coding you’ll find me building robots, designing
+            interfaces, or learning something new.
+          </p>
+          <div>
+            Sounds Intersting, checkout out{" "}
+            <Link
+              className="text-red-500 underline hover:text-red-400"
+              href={"#projects"}
+            >
+              Projects
+            </Link>{" "}
+            or{" "}
+            <Link
+              className="text-red-500 underline hover:text-red-400"
+              href={"#contact"}
+            >
+              Contact me
+            </Link>{" "}
+            and let's talk about your project.
           </div>
+        </div>
+        <Link className="font-semibold text-gray-800 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-300" href={"/about"}>
+          See more about me
+          <HiArrowNarrowRight className="ml-2 inline-block" />
         </Link>
       </section>
-      <Projects />
-      <Contact />
+      {/* <Projects />
+      <Contact /> */}
     </main>
   );
 }

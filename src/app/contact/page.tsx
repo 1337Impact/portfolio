@@ -35,12 +35,12 @@ export default function Contact() {
   };
 
   return (
-    <section
+    <main className="m-container md:my-10 flex-col"
       id="contact"
-      className="mt-20 flex min-h-[calc(100vh-40px)] flex-col items-start justify-center pt-7"
+      // className="mt-20 flex min-h-[calc(100vh-40px)]  pt-7"
     >
       <div>
-        <h1 className="text-3xl md:text-4xl text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-300">
+        <h1 className="text-2xl md:text-3xl text-gray-700 underline decoration-current decoration-2 underline-offset-4 dark:text-gray-300">
           Let{"'"}s work together.
         </h1>
         <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
@@ -52,7 +52,7 @@ export default function Contact() {
       </div>
       <form
         onSubmit={submitForm}
-        className="mt-6 grid w-full gap-4 font-semibold text-gray-700 md:grid-cols-2 dark:text-gray-200"
+        className="mt-4 grid w-full gap-4 font-semibold text-gray-700 md:grid-cols-2 dark:text-gray-200"
       >
         <div className="grid w-full gap-1">
           <label className="">Name</label>
@@ -90,7 +90,7 @@ export default function Contact() {
             minLength={5}
             maxLength={1000}
             name="message"
-            className="h-32 rounded-md border-2 border-gray-600 bg-transparent p-2 focus:outline-none dark:border-gray-200"
+            className="h-28 rounded-md border-2 border-gray-600 bg-transparent p-2 focus:outline-none dark:border-gray-200"
           />
         </div>
         <button
@@ -109,6 +109,6 @@ export default function Contact() {
           <FaArrowRightLong size="100%" />
         </div>
       </Link>
-    </section>
+    </main>
   );
 }
