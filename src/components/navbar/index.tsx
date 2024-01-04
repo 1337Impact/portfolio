@@ -1,50 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
 import styles from "./navbar.module.scss";
 import Link from "next/link";
 import MediaLinks from "../MediaLinks";
+import ThemeButton from "./ThemeButton";
 
 export default function Navbar() {
-  const localTheme = localStorage.getItem("Theme");
-  if (localTheme) {
-    if (localTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }
-  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
-  const toogleMenue = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toogleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem("Theme", newTheme);
-  };
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    const localTheme = localStorage.getItem("Theme");
-    if (localTheme) {
-      setTheme(localTheme);
-    } else {
-      window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches &&
-        setTheme("dark");
-    }
-  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -106,18 +68,10 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="flex items-center gap-3">
-          <button
-            className="text-2xl hover:text-gray-600 md:w-[100px]"
-            type="button"
-            onClick={toogleTheme}
-          >
-            <div className="float-right">
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
-            </div>
-          </button>
+          <ThemeButton />
           <button
             className={`${styles.hamburger} md:hidden`}
-            onClick={toogleMenue}
+            onClick={()=>setIsMenuOpen(!isMenuOpen)}
           >
             <div
               className={`${styles.line} ${isMenuOpen && styles.open}`}
