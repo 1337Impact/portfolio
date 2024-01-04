@@ -1,6 +1,6 @@
 // import transporter from "@/utils/transporter";
 import schema from "@/utils/zod";
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -16,14 +16,27 @@ export async function POST(request: Request) {
       },
     });
 
-    const info = await transporter.sendMail({
-      from: '"benkhattab.me" <mohamaedbenk@hotmail.com>',
-      to: "mobenkhattab@gmail.com",
-      subject: body.subject,
-      text: `by: "${body.name}"\n${body.message}`,
+    await new Promise((resolve, reject) => {
+      // send mail
+      transporter.sendMail(
+        {
+          from: '"benkhattab.me" <mohamaedbenk@hotmail.com>',
+          to: "mobenkhattab@gmail.com",
+          subject: body.subject,
+          text: `by: "${body.name}"\n${body.message}`,
+        },
+        (err, info) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            console.log(info);
+            resolve(info);
+          }
+        },
+      );
     });
-    console.log("info:", info);
-    
+
     return Response.json({ message: "success" });
   } catch (e) {
     console.log("Error:", e);
