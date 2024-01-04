@@ -6,7 +6,7 @@ import Contact from "./contact";
 
 export default function Home() {
   return (
-    <main className={`m-container w-[90%] ${styles.home}`}>
+    <main className={`m-container ${styles.home}`}>
       <section
         id="home"
         aria-labelledby="home"
@@ -17,7 +17,7 @@ export default function Home() {
             Hello I{"'"}m{" "}
             <span className="font-pacifico">Mohammed Benkhattab</span>
           </h1>
-          <p className="text-foreground mt-1 max-w-4xl text-center text-4xl font-medium leading-[3.2rem] text-gray-800 lg:text-5xl lg:leading-[4rem] dark:text-slate-300">
+          <p className="text-foreground mt-1 max-w-4xl text-center text-3xl font-medium leading-[3.2rem] text-gray-800 lg:text-5xl lg:leading-[4rem] dark:text-slate-300">
             I{"'"}m a full-stack developer, I love building things with
             <span className={`${styles.placeholder} block text-red-500`}></span>
           </p>
