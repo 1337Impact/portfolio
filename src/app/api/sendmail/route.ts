@@ -1,5 +1,6 @@
-import transporter from "@/utils/transporter";
+// import transporter from "@/utils/transporter";
 import schema from "@/utils/zod";
+import nodemailer from 'nodemailer'
 
 export async function POST(request: Request) {
   try {
@@ -7,6 +8,13 @@ export async function POST(request: Request) {
     const req = await request.json();
     const body = schema.parse(req);
     console.log(body);
+    const transporter = nodemailer.createTransport({
+      service: "hotmail",
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
+      },
+    });
 
     const info = await transporter.sendMail({
       from: '"benkhattab.me" <mohamaedbenk@hotmail.com>',
