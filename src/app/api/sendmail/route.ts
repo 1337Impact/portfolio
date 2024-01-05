@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
-    console.log(request.body);
     const req = await request.json();
     const body = schema.parse(req);
     console.log(body);
@@ -15,6 +14,18 @@ export async function POST(request: Request) {
         pass: process.env.PASS,
       },
     });
+
+    await new Promise((resolve, reject) => {
+      transporter.verify(function (error, success) {
+          if (error) {
+              console.log(error);
+              reject(error);
+          } else {
+              console.log("Server is ready to take our messages");
+              resolve(success);
+          }
+      });
+  });
 
     await new Promise((resolve, reject) => {
       // send mail
@@ -36,7 +47,6 @@ export async function POST(request: Request) {
         },
       );
     });
-
     return Response.json({ message: "success" });
   } catch (e) {
     console.log("Error:", e);
