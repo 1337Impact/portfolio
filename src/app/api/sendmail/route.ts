@@ -1,52 +1,29 @@
-// import transporter from "@/utils/transporter";
 import schema from "@/utils/zod";
-import nodemailer from "nodemailer";
+
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
     const req = await request.json();
     const body = schema.parse(req);
     console.log(body);
-    const transporter = nodemailer.createTransport({
-      service: "hotmail",
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS,
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,  
       },
+      body: JSON.stringify({
+        from: "benkhattab.me <onboarding@resend.dev>",
+        to: "mobenkhattab@gmail.com",
+        subject: `${body.subject}`,
+        text: `Sent by: "${body.name}" Email: "${body.email}"\n\n${body.message}`,
+      }),
     });
-
-    await new Promise((resolve, reject) => {
-      transporter.verify(function (error, success) {
-          if (error) {
-              console.log(error);
-              reject(error);
-          } else {
-              console.log("Server is ready to take our messages");
-              resolve(success);
-          }
-      });
-  });
-
-    await new Promise((resolve, reject) => {
-      // send mail
-      transporter.sendMail(
-        {
-          from: '"benkhattab.me" <mohamaedbenk@hotmail.com>',
-          to: "mobenkhattab@gmail.com",
-          subject: body.subject,
-          text: `by: "${body.name}"\n${body.message}`,
-        },
-        (err, info) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            console.log(info);
-            resolve(info);
-          }
-        },
-      );
-    });
+    if (!res.ok) {
+      throw new Error("Bad Request");
+    }
     return Response.json({ message: "success" });
   } catch (e) {
     console.log("Error:", e);
