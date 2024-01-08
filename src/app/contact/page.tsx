@@ -52,7 +52,7 @@ export default function Contact() {
       </div>
       <form
         onSubmit={submitForm}
-        className="mt-4 grid w-full gap-4 font-semibold text-gray-700 md:grid-cols-2 dark:text-gray-200"
+        className="mt-2 grid w-full gap-3 font-semibold text-gray-700 md:grid-cols-2 dark:text-gray-200"
       >
         <div className="grid w-full gap-1">
           <label className="">Name</label>

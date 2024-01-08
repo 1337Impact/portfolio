@@ -21,7 +21,7 @@ export default function MediaLinks({ size }: { size?: string }) {
         </a>
       </li>
       <li className="transition-all duration-100 ease-in hover:scale-110">
-        <a target="_blank" href="">
+        <a target="_blank" href="https://twitter.com/BenkhattabMo">
           <FaXTwitter />
         </a>
       </li>

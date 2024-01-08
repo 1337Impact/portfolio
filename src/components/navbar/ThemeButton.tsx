@@ -15,13 +15,21 @@ export default function async() {
     return null;
   }
   return (
-    <div className="text-2xl hover:text-gray-600 w-[100px]">
+    <div className="relative z-20 w-[100px] text-2xl hover:text-gray-600">
       {theme === "dark" ? (
-        <button className="float-right"  type="button" onClick={() => setTheme("light")}>
+        <button
+          className="float-right"
+          type="button"
+          onClick={() => setTheme("light")}
+        >
           <FaSun />
         </button>
       ) : (
-        <button className="float-right" type="button" onClick={() => setTheme("dark")}>
+        <button
+          className="float-right"
+          type="button"
+          onClick={() => setTheme("dark")}
+        >
           <FaMoon />
         </button>
       )}

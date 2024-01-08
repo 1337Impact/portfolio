@@ -4,15 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
 @layer components {
   .m-container {
     @apply mx-auto  w-[90%] max-w-[1200px] lg:w-[80%] xl:w-[70%];
   }
+}
+:root {
+  --max-hight: max(100vh, 100vw);
 }
 
 .swal-modal,
@@ -36,4 +34,25 @@
 .swal-button {
   border: 2px solid !important;
   @apply border-gray-800 bg-gray-800 text-gray-200 hover:bg-gray-700 dark:border-gray-200 dark:bg-gray-200 dark:text-gray-800 dark:hover:bg-gray-100 !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+body {
+  font-family: "Anton", sans-serif;
+  position: relative;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC")
+    repeat 0 0;
+  animation: bg-scrolling-reverse 2s infinite;
+  animation-timing-function: linear;
+}
+
+.dark body {
+  background-blend-mode: difference;
 }

@@ -1,8 +1,6 @@
 import styles from "./page.module.scss";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import Projects from "./projects";
 import Link from "next/link";
-import Contact from "./contact";
 
 export default function Home() {
   return (
@@ -10,12 +8,12 @@ export default function Home() {
       <section
         id="home"
         aria-labelledby="home"
-        className="pt-20 pb-10 flex scroll-m-[80px] flex-col gap-4"
+        className="flex max-w-[56rem] flex-col gap-4 mt-5 md:my-20 mx-auto"
       >
         <h1 className="text-4xl text-gray-800 underline underline-offset-[3px] dark:text-slate-200">
           I'M Mohammed Benkhattab.
         </h1>
-        <div className="flex max-w-4xl flex-col gap-1 font-semibold leading-6 text-gray-600 lg:leading-8 dark:text-slate-400">
+        <div className="flex flex-col gap-1 font-semibold leading-6 text-gray-600 lg:leading-8 dark:text-slate-400">
           <p>
             A Software developer, designer and tech enthusiast specialized in
             web development.
@@ -28,8 +26,8 @@ export default function Home() {
             >
               1337 FIL
             </a>{" "}
-            ,a Computer Science School located in Khouribga, part of 42 Network and Um6p
-            University.
+            ,a Computer Science School located in Khouribga, part of 42 Network
+            and Um6p University.
           </p>
           <p>
             I like building things using{" "}
@@ -59,13 +57,14 @@ export default function Home() {
             and let's talk about your project.
           </div>
         </div>
-        <Link className="font-semibold text-gray-800 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-300" href={"/about"}>
+        <Link
+          className="font-semibold text-gray-800 hover:text-gray-600 dark:text-gray-200 dark:hover:text-gray-300"
+          href={"/about"}
+        >
           See more about me
           <HiArrowNarrowRight className="ml-2 inline-block" />
         </Link>
       </section>
-      {/* <Projects />
-      <Contact /> */}
     </main>
   );
 }

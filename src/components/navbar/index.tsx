@@ -17,19 +17,19 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="m-container h-[80px] text-slate-900 dark:text-slate-300">
+    <nav className="m-container h-[80px] md:h-[100px] text-slate-900 dark:text-slate-300">
       <div className="flex h-full w-full items-center justify-between">
         <Link href="/">
-          <h1 className="cursor-pointer text-center font-pacifico text-xl md:text-[1.35rem]">
+          <h1 className="relative z-20 cursor-pointer text-center font-pacifico text-xl md:text-[1.35rem]">
             Benkhattab.me
           </h1>
         </Link>
         <div
           className={`${
             !isMenuOpen && "max-md:hidden"
-          }  z-30 max-md:absolute max-md:left-0 max-md:top-[80px] max-md:h-[calc(100vh-80px)] max-md:w-full max-md:backdrop-blur-xl`}
+          } z-10 max-md:absolute max-md:left-0 max-md:top-0 max-md:h-[100dvh] max-md:w-full max-md:backdrop-blur-xl`}
         >
-          <ul className="flex h-full items-center justify-around font-semibold max-md:flex-col max-md:text-3xl md:gap-10">
+          <ul className="flex h-full items-center justify-around font-semibold max-md:pt-20 max-md:flex-col max-md:text-3xl md:gap-10">
             <Link href="/about">
               <li
                 onClick={() => setIsMenuOpen(false)}
@@ -70,8 +70,8 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeButton />
           <button
-            className={`${styles.hamburger} md:hidden`}
-            onClick={()=>setIsMenuOpen(!isMenuOpen)}
+            className={`${styles.hamburger} md:hidden z-20`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div
               className={`${styles.line} ${isMenuOpen && styles.open}`}
