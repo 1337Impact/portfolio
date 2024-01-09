@@ -8,12 +8,12 @@ export default function Home() {
       <section
         id="home"
         aria-labelledby="home"
-        className="flex max-w-[56rem] flex-col gap-4 mt-5 md:my-20 mx-auto"
+        className="mx-auto flex h-[calc(100vh-140px)] min-h-[600px] max-h-[800px] max-w-[56rem] flex-col gap-4 md:justify-center"
       >
         <h1 className="text-4xl text-gray-800 underline underline-offset-[3px] dark:text-slate-200">
           I'M Mohammed Benkhattab.
         </h1>
-        <div className="flex flex-col gap-1 font-semibold leading-6 text-gray-600 lg:leading-8 dark:text-slate-400">
+        <div className="flex flex-col gap-1 font-semibold leading-6 text-gray-600 dark:text-slate-400 lg:leading-8 2xl:text-xl 2xl:font-normal 2xl:leading-9">
           <p>
             A Software developer, designer and tech enthusiast specialized in
             web development.
