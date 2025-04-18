@@ -4,32 +4,32 @@ const nextConfig = {
     return [
       {
         source: "/linkedin",
-        destination: "https://linkedin.com/in/AlzyWelzy",
+        destination: "https://www.linkedin.com/in/mohammed-benkhattab",
         permanent: true,
       },
       {
         source: "/github",
-        destination: "https://github.com/AlzyWelzy",
+        destination: "https://github.com/1337Impact",
         permanent: true,
       },
       {
         source: "/twitter",
-        destination: "https://twitter.com/AlzyWelzy",
+        destination: "https://x.com/intent/follow?screen_name=BenkhattabMo",
         permanent: true,
       },
       {
         source: "/instagram",
-        destination: "https://www.instagram.com/alzywelzyy/",
+        destination: "https://www.instagram.com/mohammed_benkhattab",
         permanent: true,
       },
       {
-        source: "/facebook",
-        destination: "https://www.facebook.com/AlzyWelzyy",
+        source: "/upwork",
+        destination: "https://www.upwork.com/freelancers/mohammedbenkhattab",
         permanent: true,
       },
       {
-        source: "/esyconnect",
-        destination: "https://esyconnect.com/candidate/alzywelzy/",
+        source: "/hackerrank",
+        destination: "http://hackerrank.com/profile/mobenkhattab",
         permanent: true,
       },
     ];

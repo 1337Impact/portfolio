@@ -13,3 +13,14 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+@layer base {
+  :root {
+    --background: #f9fafb;
+    --foreground: #111827;
+  }
+  .dark {
+    --background: #111827;
+    --foreground: #f9fafb;
+  }
+}
