@@ -4,11 +4,13 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { skillsData } from "@/lib/data";
+import { useTheme } from "@/context/theme-context";
 
 
 export default function Skills() {
   const { ref } = useSectionInView("Skills", 0.5);
   const containerRef = useRef<HTMLDivElement>(null);
+  const {theme} = useTheme();
 
   return (
     <section id="skills" ref={ref}>
@@ -28,10 +30,10 @@ export default function Skills() {
         </div>
         
         <div className="relative max-w-[800px] mx-auto flex items-center flex-wrap justify-center" ref={containerRef}>
-          {skillsData.map(({ src, name }: any, index: number) => (
+          {skillsData.map(({ src, name, dark }: any, index: number) => (
             <SkillIcon 
               key={src} 
-              src={src} 
+              src={theme === "dark" && dark ? dark : src} 
               name={name} 
               index={index} 
               totalIcons={skillsData.length}
@@ -53,35 +55,24 @@ interface SkillIconProps {
 }
 
 function SkillIcon({ src, name, index, totalIcons, containerRef }: SkillIconProps) {
-  // Calculate the final position in a grid-like layout
-  const columns = Math.ceil(Math.sqrt(totalIcons));
-  const finalRow = Math.floor(index / columns);
-  const finalCol = index % columns;
   const isInView = useInView(containerRef, { once: true });
   // Generate a random starting position outside the container
-  const getRandomPosition = () => {
-    const directions = [
-      { x: -100, y: -100 }, // top-left
-      { x: 0, y: -100 },    // top
-      { x: 100, y: -100 },  // top-right
-      { x: 100, y: 0 },     // right
-      { x: 100, y: 100 },   // bottom-right
-      { x: 0, y: 100 },     // bottom
-      { x: -100, y: -100 }, // bottom-left
-      { x: -100, y: 0 },    // left
-    ];
-    
-    const randomDirection = directions[Math.floor(Math.random() * directions.length)];
-    return randomDirection;
-  };
-  
-  const randomStart = getRandomPosition();
+  const directions = [
+    { x: -200, y: -200 }, // top-left
+    { x: 0, y: -200 },    // top
+    { x: 200, y: -200 },  // top-right
+    { x: 200, y: 0 },     // right
+    { x: 200, y: 200 },   // bottom-right
+    { x: 0, y: 200 },     // bottom
+    { x: -200, y: -200 }, // bottom-left
+    { x: -200, y: 0 },    // left
+  ];
 
   const variants = {
     hidden: {
       opacity: 0,
-      x: randomStart.x,
-      y: randomStart.y,
+      x: directions[index % directions.length].x,
+      y: directions[index % directions.length].y,
       scale: 0.5,
     },
     visible: {
@@ -110,7 +101,7 @@ function SkillIcon({ src, name, index, totalIcons, containerRef }: SkillIconProp
       <img 
         src={src} 
         alt={name} 
-        className="h-10 sm:h-12 transition-all duration-300 hover:scale-110" 
+        className="max-w-40 h-10 sm:h-12 transition-all duration-300 hover:scale-110" 
       />
     </motion.div>
   );

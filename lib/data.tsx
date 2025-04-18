@@ -235,15 +235,17 @@ export const skillsData = [
   },
   {
     name: 'NextJs',
-    src: '/images/skills/nextjs.svg'
+    src: '/images/skills/nextjs.svg',
+    dark: '/images/skills/nextjs-dark.svg'
   },
   {
-    name: 'ExpressJS',
+    name: 'Angular',
     src: '/images/skills/angular.svg'
   },
   {
-    name: 'MongoDB',
-    src: '/images/skills/express.svg'
+    name: 'ExpressJS',
+    src: '/images/skills/express.svg',
+    dark: '/images/skills/express-dark.svg'
   },
   {
     name: 'Figma',
