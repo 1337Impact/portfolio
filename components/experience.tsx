@@ -8,12 +8,10 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
-  const { theme } = useTheme();
-
+  
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -30,35 +28,36 @@ export default function Experience() {
           </p>
         </div>
       </div>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline 
+        lineColor="var(--secondary)"
+      >
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                background: "var(--card-background)",
                 boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
+                border: "1px solid var(--foreground)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
+                color: "var(--foreground)",
               }}
               contentArrowStyle={{
-                borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                borderRight: "0.4rem solid var(--muted-foreground)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background:
-                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                background: "var(--background)",
+                color: "var(--foreground)",
                 fontSize: "1.5rem",
+                boxShadow: "0 0 0 4px var(--accent)",
               }}
+              dateClassName="text-muted-foreground"
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="!font-bold !text-[13px] !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <h3 className="font-semibold capitalize text-foreground">{item.title}</h3>
+              <p className="!font-bold !text-[13px] !mt-0 text-primary">{item.location}</p>
+              <p className="!mt-1 !font-normal text-foreground">
                 {item.description}
               </p>
             </VerticalTimelineElement>

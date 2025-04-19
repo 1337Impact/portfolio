@@ -62,6 +62,19 @@ export function ProjectCard({
       }
     }
   };
+  
+    // Icon hover animation variants
+    const iconVariants: Variants = {
+      initial: { scale: 1 },
+      hover: { 
+        scale: 1.15,
+        rotate: [0, -10, 10, -5, 5, 0],
+        transition: { 
+          duration: 0.5,
+          ease: "easeInOut"
+        }
+      }
+    };
 
   return (
       <motion.div
@@ -75,6 +88,22 @@ export function ProjectCard({
             "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
           }
         >
+          {links && links.length > 0 && (
+            <div className="absolute top-2 right-2 z-10 flex gap-2">
+              {links?.map((link, idx) => (
+                <Link href={link?.href} key={idx} target="_blank" className="block">
+                  <motion.div
+                    initial="initial"
+                    whileHover="hover"
+                    variants={iconVariants}
+                    className="bg-background/90 backdrop-blur-sm p-2 rounded-full shadow-sm border border-muted flex items-center justify-center text-foreground hover:text-primary transition-colors"
+                  >
+                    {link.icon}
+                  </motion.div>
+                </Link>
+              ))}
+            </div>
+          )}
           <Link
             href={href || "#"}
             className={cn("block cursor-pointer", className)}
@@ -129,20 +158,6 @@ export function ProjectCard({
               </div>
             )}
           </CardContent>
-          <CardFooter className="px-2 pb-2">
-            {links && links.length > 0 && (
-              <div className="flex flex-row flex-wrap items-start gap-1">
-                {links?.map((link, idx) => (
-                  <Link href={link?.href} key={idx} target="_blank">
-                    <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                      {link.icon}
-                      {link.type}
-                    </Badge>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </CardFooter>
         </Card>
       </motion.div>
   );

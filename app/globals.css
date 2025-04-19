@@ -4,6 +4,7 @@
 
 html {
   --line-color: #e5e7eb;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in, border-color 0.1s ease-in, --background 0.1s ease-in, --foreground 0.1s ease-in, --primary 0.1s ease-in, --secondary 0.1s ease-in !important;
 }
 
 html.dark {
@@ -18,9 +19,11 @@ html.dark {
   :root {
     --background: #f9fafb;
     --foreground: #111827;
+    --card-background: #ffffff;
   }
   .dark {
     --background: #111827;
     --foreground: #f9fafb;
+    --card-background: #1f2937;
   }
 }

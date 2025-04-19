@@ -2,16 +2,16 @@ import React from "react";
 // import { CgWorkAlt } from "react-icons/cg";
 // import { FaReact } from "react-icons/fa";
 import { LuGraduationCap, LuCode } from "react-icons/lu";
-import articify from "@/public/articify.png";
-import epiphora from "@/public/epiphora.png";
-import mozzify from "@/public/mozzify.png";
-import aadhiran_ventures from "@/public/aadhiran_ventures.png";
-import springreen_main_site from "@/public/springreen_main_site.png";
-import cloudtechtiq from "@/public/cloudtechtiq.png";
-import rosterly from "@/public/rosterly.png";
-import { title } from "process";
-import { Icons } from "@/components/icons";
-// import { icons } from "react-icons";
+import {
+  GiLemon,
+  GiFlowerPot,
+  GiPineTree,
+  GiWaterDrop,
+  GiMountainCave,
+} from "react-icons/gi";
+import { BsMoon, BsSun } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { GoProjectSymlink } from "react-icons/go";
 
 export const links = [
   {
@@ -46,12 +46,12 @@ export const experiencesData = [
     location: "Remote",
     description:
       "I currently work as a freelance full stack developer on Upwork, helping clients build custom web apps and digital platforms. My work spans UI/UX implementation, authentication, admin dashboards, and responsive design using React, Next.js, and Tailwind CSS.",
-      icon: React.createElement(LuCode),
+    icon: React.createElement(LuCode),
     date: "2024 - present",
   },
   {
     title: "Full Stack Developer (Kimih Platform)",
-    location: "Remote", 
+    location: "Remote",
     description:
       "Co-founded Kimih, a platform for booking local beauty and wellness services in the Middle East. I designed and developed key features using modern frontend technologies, contributing to a sleek user experience and a flexible business model with no subscription fees.",
     icon: React.createElement(LuCode),
@@ -78,8 +78,8 @@ export const experiencesData = [
     location: "Khouribga, Morocco",
     description:
       "Joined 1337 School in 2021, a peer-to-peer coding program focused on learning through real-world projects and collaboration. This experience built my foundation in algorithms, low-level programming, and full stack web development.",
-      icon: React.createElement(LuGraduationCap),
-      date: "2021 - 2025",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021 - 2025",
   },
 ] as const;
 
@@ -105,7 +105,7 @@ export const projectsData = [
       {
         type: "Website",
         href: "https://chatcollect.com",
-        icon: <Icons.globe className="size-3" />,
+        icon: <FaGithub className="size-3" />,
       },
     ],
     image: "",
@@ -133,12 +133,12 @@ export const projectsData = [
       {
         type: "Website",
         href: "https://magicui.design",
-        icon: <Icons.globe className="size-3" />,
+        icon: <FaGithub className="size-3" />,
       },
       {
         type: "Source",
         href: "https://github.com/magicuidesign/magicui",
-        icon: <Icons.github className="size-3" />,
+        icon: <GoProjectSymlink className="size-3" />,
       },
     ],
     image: "",
@@ -166,12 +166,12 @@ export const projectsData = [
       {
         type: "Website",
         href: "https://llm.report",
-        icon: <Icons.globe className="size-3" />,
+        icon: <FaGithub className="size-3" />,
       },
       {
         type: "Source",
         href: "https://github.com/dillionverma/llm.report",
-        icon: <Icons.github className="size-3" />,
+        icon: <GoProjectSymlink className="size-3" />,
       },
     ],
     image: "",
@@ -199,7 +199,7 @@ export const projectsData = [
       {
         type: "Website",
         href: "https://automatic.chat",
-        icon: <Icons.globe className="size-3" />,
+        icon: <FaGithub className="size-3" />,
       },
     ],
     image: "",
@@ -210,63 +210,208 @@ export const projectsData = [
 
 export const skillsData = [
   {
-    name: 'MongoDB',
-    src: '/images/skills/mongodb.svg'
+    name: "MongoDB",
+    src: "/images/skills/mongodb.svg",
   },
   {
-    name: 'NodeJS',
-    src: '/images/skills/node.svg'
+    name: "NodeJS",
+    src: "/images/skills/node.svg",
   },
   {
-    name: 'ReactJS',
-    src: '/images/skills/react.svg'
+    name: "ReactJS",
+    src: "/images/skills/react.svg",
   },
   {
-    name: 'Javascript',
-    src: '/images/skills/js.svg'
+    name: "Javascript",
+    src: "/images/skills/js.svg",
   },
   {
-    name: 'AngularJS',
-    src: '/images/skills/ts.svg'
+    name: "AngularJS",
+    src: "/images/skills/ts.svg",
   },
   {
-    name: 'React Native',
-    src: '/images/skills/react-native.svg'
+    name: "React Native",
+    src: "/images/skills/react-native.svg",
   },
   {
-    name: 'NextJs',
-    src: '/images/skills/nextjs.svg',
-    dark: '/images/skills/nextjs-dark.svg'
+    name: "NextJs",
+    src: "/images/skills/nextjs.svg",
+    dark: "/images/skills/nextjs-dark.svg",
   },
   {
-    name: 'Angular',
-    src: '/images/skills/angular.svg'
+    name: "Angular",
+    src: "/images/skills/angular.svg",
   },
   {
-    name: 'ExpressJS',
-    src: '/images/skills/express.svg',
-    dark: '/images/skills/express-dark.svg'
+    name: "ExpressJS",
+    src: "/images/skills/express.svg",
+    dark: "/images/skills/express-dark.svg",
   },
   {
-    name: 'Figma',
-    src: '/images/skills/figma.svg'
+    name: "Figma",
+    src: "/images/skills/figma.svg",
   },
   {
-    name: 'Git',
-    src: '/images/skills/git.svg'
-  }
+    name: "Git",
+    src: "/images/skills/git.svg",
+  },
 ];
 
+// Define theme types
+export type ThemeType =
+  | "light"
+  | "dark"
+  | "lemon"
+  | "forest"
+  | "ocean"
+  | "lavender"
+  | "desert";
+
+// Define theme interface
+export interface ThemeOption {
+  name: ThemeType;
+  label: string;
+  icon: React.ReactNode;
+  colors: {
+    background: string;
+    foreground: string;
+    primary: string;
+    secondary: string;
+    muted: string;
+    "muted-foreground": string;
+    accent: string;
+    "accent-foreground": string;
+    "card-background": string;
+  };
+}
+
+// Theme options with their colors and icons
+export const themeOptions: ThemeOption[] = [
+  {
+    name: "light",
+    label: "Light",
+    icon: <BsSun className="h-4 w-4" />,
+    colors: {
+      background: "#ffffff",
+      foreground: "#020817",
+      primary: "#0f172a",
+      secondary: "#f1f5f9",
+      muted: "#f1f5f9",
+      "muted-foreground": "#64748b",
+      accent: "#f1f5f9",
+      "accent-foreground": "#0f172a",
+      "card-background": "#ffffff",
+    },
+  },
+  {
+    name: "dark",
+    label: "Dark",
+    icon: <BsMoon className="h-4 w-4" />,
+    colors: {
+      background: "#020817",
+      foreground: "#ffffff",
+      primary: "#f8fafc",
+      secondary: "#1e293b",
+      muted: "#1e293b",
+      "muted-foreground": "#94a3b8",
+      accent: "#1e293b",
+      "accent-foreground": "#f8fafc",
+      "card-background": "#1e293b",
+    },
+  },
+  {
+    name: "lemon",
+    label: "Lemon",
+    icon: <GiLemon className="h-4 w-4" />,
+    colors: {
+      background: "#FFFACD",
+      foreground: "#556B2F",
+      primary: "#FFA500",
+      secondary: "#E6F2A2",
+      muted: "#F0E68C",
+      "muted-foreground": "#556B2F",
+      accent: "#FFFF00",
+      "accent-foreground": "#2F4F4F",
+      "card-background": "#FFFDE7",
+    },
+  },
+  {
+    name: "forest",
+    label: "Forest",
+    icon: <GiPineTree className="h-4 w-4" />,
+    colors: {
+      background: "#F1F8E9",
+      foreground: "#33691E",
+      primary: "#558B2F",
+      secondary: "#DCEDC8",
+      muted: "#C5E1A5",
+      "muted-foreground": "#33691E",
+      accent: "#8BC34A",
+      "accent-foreground": "#1B5E20",
+      "card-background": "#F9FBE7",
+    },
+  },
+  {
+    name: "ocean",
+    label: "Ocean",
+    icon: <GiWaterDrop className="h-4 w-4" />,
+    colors: {
+      background: "#E3F2FD",
+      foreground: "#01579B",
+      primary: "#0288D1",
+      secondary: "#B3E5FC",
+      muted: "#81D4FA",
+      "muted-foreground": "#01579B",
+      accent: "#29B6F6",
+      "accent-foreground": "#01579B",
+      "card-background": "#E1F5FE",
+    },
+  },
+  {
+    name: "lavender",
+    label: "Lavender",
+    icon: <GiFlowerPot className="h-4 w-4" />,
+    colors: {
+      background: "#F3E5F5",
+      foreground: "#4A148C",
+      primary: "#7B1FA2",
+      secondary: "#E1BEE7",
+      muted: "#CE93D8",
+      "muted-foreground": "#4A148C",
+      accent: "#AB47BC",
+      "accent-foreground": "#4A148C",
+      "card-background": "#F5E9F7",
+    },
+  },
+  {
+    name: "desert",
+    label: "Desert",
+    icon: <GiMountainCave className="h-4 w-4" />,
+    colors: {
+      background: "#FFF3E0",
+      foreground: "#BF360C",
+      primary: "#E64A19",
+      secondary: "#FFE0B2",
+      muted: "#FFCC80",
+      "muted-foreground": "#BF360C",
+      accent: "#FF9800",
+      "accent-foreground": "#BF360C",
+      "card-background": "#FFF8E1",
+    },
+  },
+];
 
 export const emailId = "mohammed@benkhattab.dev" as const;
 export const websiteUrl = "benkhattab.dev" as const;
 
-
 export const documentsName = {
-  'cover_letter': 'Mohammed_Benkhattab_Cover_Letter.pdf'
-  ,
-  'resume': 'Mohammed_Benkhattab_Resume.pdf',
-  'experience_letter': 'Mohammed_Benkhattab_Experience_Letter.pdf'
-}
+  cover_letter: "Mohammed_Benkhattab_Cover_Letter.pdf",
+  resume: "Mohammed_Benkhattab_Resume.pdf",
+  experience_letter: "Mohammed_Benkhattab_Experience_Letter.pdf",
+};
 
-export const { cover_letter: coverLetterName, resume: resumeName, experience_letter: experienceLetterName } = documentsName
+export const {
+  cover_letter: coverLetterName,
+  resume: resumeName,
+  experience_letter: experienceLetterName,
+} = documentsName;

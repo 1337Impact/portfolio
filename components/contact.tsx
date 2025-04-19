@@ -32,16 +32,19 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="text-muted-foreground -mt-6">
         Please contact me directly at{" "}
-        <a className="underline" href={"mailto:"+emailId}>
+        <a 
+          className="underline text-primary hover:text-primary/90 transition-colors" 
+          href={"mailto:"+emailId}
+        >
           {emailId}{" "}
         </a>{" "}
         or through this form.
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-10 flex flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -54,19 +57,21 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg border border-muted bg-card-background focus:bg-transparent transition-all outline-none"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
           placeholder="Your email"
+          style={{ color: "var(--foreground)" }}
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg border border-muted p-4 bg-card-background focus:bg-transparent transition-all outline-none"
           name="message"
           placeholder="Your message"
           required
           maxLength={5000}
+          style={{ color: "var(--foreground)" }}
         />
         <SubmitBtn />
       </form>
