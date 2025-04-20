@@ -34,15 +34,14 @@ export default function ThemeSwitch() {
   }, [theme]);
 
   // Preview theme on hover
-  const handleThemePreview =
-    (themeName: ThemeType) => {
-      if (!isOpen){
-        return
-      }
-      console.log("Previewing theme:", themeName);
-      setPreviewTheme(themeName);
-      applyTheme(themeName);
+  const handleThemePreview = (themeName: ThemeType) => {
+    if (!isOpen) {
+      return;
     }
+    setPreviewTheme(themeName);
+    applyTheme(themeName);
+  };
+  
 
   // End preview and restore original theme if not selecting
   const handleEndPreview = () => {
@@ -54,13 +53,12 @@ export default function ThemeSwitch() {
 
   // Change theme permanently
   const handleThemeChange = (themeName: ThemeType) => {
-    console.log("Changing theme to:", themeName);
     setTheme(themeName);
     setOriginalTheme(themeName);
-    setPreviewTheme(null);
-    setIsOpen(false);
-    // setTimeout(() => {
-    // }, 500);
+    setTimeout(() => {
+      setPreviewTheme(null);
+      setIsOpen(false);
+    }, 500);
   };
 
   const currentTheme = themeOptions.find((t) => t.name === theme);
@@ -152,7 +150,8 @@ export default function ThemeSwitch() {
                             <button
                               className="w-10 h-10 rounded-full focus:outline-none hover:scale-110 transition-all"
                               disabled={!isOpen}
-                              onMouseEnter={() => handleThemePreview(themeOption.name)
+                              onMouseEnter={() =>
+                                handleThemePreview(themeOption.name)
                               }
                               onClick={() =>
                                 handleThemeChange(themeOption.name)

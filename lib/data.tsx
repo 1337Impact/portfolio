@@ -114,7 +114,7 @@ export const projectsData = [
       },
     ],
     image: "",
-    video: "/videos/kimih-demo.mp4",
+    video: "https://xeh9acv4mlhwizna.public.blob.vercel-storage.com/kimih-demo-5IsnjLN64uj0MZJk7Q6w8UmQcrTM1P.mp4",
   },
   {
     title: "Applitics",
@@ -140,7 +140,7 @@ export const projectsData = [
       },
     ],
     image: "",
-    video: "/videos/applitics-demo.mp4",
+    video: "https://xeh9acv4mlhwizna.public.blob.vercel-storage.com/applitics-demo-1dD9uJqo2hxyueQpc3jrj5C9iyVjt0.mp4",
   },
   {
     title: "Bhives.Ai",
@@ -170,7 +170,7 @@ export const projectsData = [
       },
     ],
     image: "",
-    video: "/videos/bhives-demo.mp4",
+    video: "https://xeh9acv4mlhwizna.public.blob.vercel-storage.com/bhives-demo-OcjeElWL2dfXVagE6l4MudvYhElHVz.mp4",
   },
   {
     title: "TeamShifts",
@@ -196,7 +196,7 @@ export const projectsData = [
       },
     ],
     image: "",
-    video: "/videos/teamshifts-demo.mp4",
+    video: "https://xeh9acv4mlhwizna.public.blob.vercel-storage.com/teamshifts-demo-jCnv8zXA5K6Ad3TyaNBrfYkvHzDE8t.mp4",
   },
 ];
 
