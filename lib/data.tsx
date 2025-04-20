@@ -90,15 +90,16 @@ export const projectsData = [
     dates: "Jul 2024",
     active: true,
     description:
-      "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+      "Kimih is a booking platform for beauty and wellness services in the Middle East, offering subscription-free tools for businesses and a seamless experience for users.",
     technologies: [
       "Next.js",
       "Typescript",
-      "PostgreSQL",
-      "Supabase",
       "TailwindCSS",
       "Shadcn UI",
-      "Stripe",
+      "Supabase",
+      "PostgreSQL",
+      "Vercel",
+      "Tap payments",
     ],
     links: [
       {
@@ -121,16 +122,15 @@ export const projectsData = [
     dates: "Mar 2025",
     active: true,
     description:
-      "Designed, developed and sold animated UI components for developers.",
+      "Applitics is a French SaaS agency building high-performance websites with animated, reusable UI components for developers and teams.",
     technologies: [
       "Next.js",
       "Typescript",
-      "PostgreSQL",
-      "Prisma",
       "TailwindCSS",
-      "Stripe",
       "Shadcn UI",
-      "Magic UI",
+      "Supabase",
+      "PostgreSQL",
+      "Vercel",
     ],
     links: [
       {
@@ -148,13 +148,14 @@ export const projectsData = [
     dates: "Jun 2024 - Jul 2024",
     active: true,
     description:
-      "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+      "Bhives.ai is an AI agency focused on making automation accessible to businesses through smart, real-world AI solutions and digital tools. Bhives offers AI-first digital platforms designed to streamline operations and drive growth.",
     technologies: [
       "Next.js",
       "Typescript",
       "TailwindCSS",
       "Shadcn UI",
-      "Magic UI",
+      "Supabase",
+      "PostgreSQL",
     ],
     links: [
       {
@@ -169,8 +170,7 @@ export const projectsData = [
       },
     ],
     image: "",
-    video:
-      "/videos/bhives-demo.mp4",
+    video: "/videos/bhives-demo.mp4",
   },
   {
     title: "TeamShifts",
@@ -178,17 +178,15 @@ export const projectsData = [
     dates: "Jan 2024 - May 2024",
     active: true,
     description:
-      "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+      "TeamShifts is a cloud-based CRM and task management platform built to help teams coordinate shifts, projects, and clients. the platform includes features such as scheduling, Kanban/task views, calendars, invoicing, and client communication tools.",
     technologies: [
       "Next.js",
       "Typescript",
       "PostgreSQL",
-      "Prisma",
+      "Supabase",
       "TailwindCSS",
       "Shadcn UI",
-      "Magic UI",
-      "Stripe",
-      "Cloudflare Workers",
+      "Vercel",
     ],
     links: [
       {
@@ -198,10 +196,9 @@ export const projectsData = [
       },
     ],
     image: "",
-    video:
-      "/videos/teamshifts-demo.mp4",
+    video: "/videos/teamshifts-demo.mp4",
   },
-] as const;
+];
 
 export const skillsData = [
   {

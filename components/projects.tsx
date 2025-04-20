@@ -9,7 +9,7 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
 
   return (
-    <section ref={ref} id="projects">
+    <section ref={ref} id="projects" className="scroll-mt-16">
       <div className="text-foreground space-y-12 w-full py-12">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

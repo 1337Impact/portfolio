@@ -19,7 +19,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="max-w-[50rem] text-center scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -61,7 +61,8 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Mohammed.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span>. I love building things and helping people.
+        <span className="font-bold">full-stack developer</span>. I love building
+        things and helping people.
       </motion.h1>
 
       <motion.div
@@ -94,24 +95,25 @@ export default function Intro() {
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
+        <div className="flex items-center justify-center gap-2">
+          <a
+            aria-label="LinkedIn Profile"
+            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
+            href="/linkedin"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
 
-        <a
-          aria-label="LinkedIn Profile"
-          className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
-          href="/linkedin"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          aria-label="Github Profile"
-          className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
-          href="/github"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+          <a
+            aria-label="Github Profile"
+            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
+            href="/github"
+            target="_blank"
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );

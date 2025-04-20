@@ -13,7 +13,7 @@ export default function Skills() {
   const {theme} = useTheme();
 
   return (
-    <section id="skills" ref={ref}>
+    <section id="skills" ref={ref} className="mt-10 scroll-mt-16">
       <div className="space-y-12 w-full py-12">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
