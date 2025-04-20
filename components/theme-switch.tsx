@@ -116,7 +116,7 @@ export default function ThemeSwitch() {
               width: "3.5rem",
               transition: { duration: 0.3, ease: "easeOut" },
             }}
-            className="relative bg-secondary bg-opacity-80 backdrop-blur-[0.5rem] border border-foreground border-opacity-40 shadow-2xl overflow-hidden rounded-full flex flex-col items-center"
+            className="relative bg-opacity-20 backdrop-blur-[2rem] border border-foreground border-opacity-40 shadow-2xl overflow-hidden rounded-full flex flex-col items-center"
           >
             {/* Vertical list of theme options */}
             <AnimatePresence>

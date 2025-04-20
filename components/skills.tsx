@@ -29,7 +29,7 @@ export default function Skills() {
           </div>
         </div>
         
-        <div className="relative max-w-[800px] mx-auto flex items-center flex-wrap justify-center" ref={containerRef}>
+        <div className="relative max-w-[800px] mx-auto flex items-center flex-wrap justify-center overflow-hidden" ref={containerRef}>
           {skillsData.map(({ src, name, dark }: any, index: number) => (
             <SkillIcon 
               key={src} 
