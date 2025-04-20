@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --line-color: #e5e7eb;
-  transition: background-color 0.1s ease-in, color 0.1s ease-in, border-color 0.1s ease-in, --background 0.1s ease-in, --foreground 0.1s ease-in, --primary 0.1s ease-in, --secondary 0.1s ease-in !important;
-}
-
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+body {
+  /* This is the key part - add transition for all properties */
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 .borderBlack {

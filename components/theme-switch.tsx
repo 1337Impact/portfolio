@@ -15,7 +15,6 @@ import { themeOptions, ThemeType } from "@/lib/data";
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [isReady, setIsReady] = useState(false);
   const [previewTheme, setPreviewTheme] = useState<ThemeType | null>(null);
   const [originalTheme, setOriginalTheme] = useState<ThemeType>("light");
 
@@ -30,24 +29,20 @@ export default function ThemeSwitch() {
     });
   };
 
-  // // Store the actual theme when opening dropdown to restore after preview
-  // useEffect(() => {
-  //   if (!previewTheme) {
-  //     setOriginalTheme(theme as ThemeType);
-  //   }
-  // }, [theme, previewTheme]);
-
   useEffect(() => {
     applyTheme(theme);
   }, [theme]);
 
   // Preview theme on hover
-  const handleThemePreview = useCallback((themeName: ThemeType) => {
-    if (!isReady) return;
-    console.log("Previewing theme:", themeName);
-    setPreviewTheme(themeName);
-    applyTheme(themeName);
-  }, [isReady]);
+  const handleThemePreview =
+    (themeName: ThemeType) => {
+      if (!isOpen){
+        return
+      }
+      console.log("Previewing theme:", themeName);
+      setPreviewTheme(themeName);
+      applyTheme(themeName);
+    }
 
   // End preview and restore original theme if not selecting
   const handleEndPreview = () => {
@@ -60,41 +55,31 @@ export default function ThemeSwitch() {
   // Change theme permanently
   const handleThemeChange = (themeName: ThemeType) => {
     console.log("Changing theme to:", themeName);
-    setIsReady(false);
     setTheme(themeName);
     setOriginalTheme(themeName);
-    setTimeout(() => {
     setPreviewTheme(null);
     setIsOpen(false);
-    }, 2000);
+    // setTimeout(() => {
+    // }, 500);
   };
 
   const currentTheme = themeOptions.find((t) => t.name === theme);
 
-  // State to track if menu should be locked open after clicking
-  const [isLocked, setIsLocked] = useState(false);
   // Ref for timer to add closing delay
   const closeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Handle mouse enter - open the menu
   const handleMouseEnter = () => {
-    setIsReady(false);
     // Clear any pending close timer
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
       closeTimerRef.current = null;
     }
     setIsOpen(true);
-    setTimeout(() => {
-      setIsReady(true);
-    }, 600);
   };
 
   // Handle mouse leave - add delay before closing
   const handleMouseLeave = () => {
-    // Don't close if menu is locked
-    if (isLocked) return;
-
     // Set timer to close after delay
     closeTimerRef.current = setTimeout(() => {
       setIsOpen(false);
@@ -104,7 +89,6 @@ export default function ThemeSwitch() {
 
   // Handle click on main button - toggle locked state
   const handleButtonClick = () => {
-    setIsLocked(!isLocked);
     setIsOpen(true); // Ensure menu is open when clicking
   };
 
@@ -132,7 +116,7 @@ export default function ThemeSwitch() {
               width: "3.5rem",
               transition: { duration: 0.3, ease: "easeOut" },
             }}
-            className="relative bg-white bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl overflow-hidden rounded-full dark:bg-gray-950 flex flex-col items-center"
+            className="relative bg-secondary bg-opacity-80 backdrop-blur-[0.5rem] border border-foreground border-opacity-40 shadow-2xl overflow-hidden rounded-full flex flex-col items-center"
           >
             {/* Vertical list of theme options */}
             <AnimatePresence>
@@ -167,10 +151,9 @@ export default function ThemeSwitch() {
                           <TooltipTrigger asChild>
                             <button
                               className="w-10 h-10 rounded-full focus:outline-none hover:scale-110 transition-all"
-                              onMouseEnter={() =>
-                                handleThemePreview(themeOption.name)
+                              disabled={!isOpen}
+                              onMouseEnter={() => handleThemePreview(themeOption.name)
                               }
-                              onMouseLeave={handleEndPreview}
                               onClick={() =>
                                 handleThemeChange(themeOption.name)
                               }
@@ -188,7 +171,7 @@ export default function ThemeSwitch() {
                               </div>
                             </button>
                           </TooltipTrigger>
-                          <TooltipContent side="left">
+                          <TooltipContent className="bg-muted" side="left">
                             <p>{themeOption.label}</p>
                           </TooltipContent>
                         </Tooltip>
@@ -207,19 +190,13 @@ export default function ThemeSwitch() {
                   : "",
               }}
               className={`absolute bottom-[5px] w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out`}
+              onMouseEnter={handleEndPreview}
               onClick={handleButtonClick}
             >
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <div className="cursor-pointer">
-                    {currentTheme?.icon ||
-                      (theme === "light" ? <BsSun /> : <BsMoon />)}
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent side="left">
-                  <p>{isLocked ? "Unlock menu" : "Click to lock menu open"}</p>
-                </TooltipContent>
-              </Tooltip>
+              <div className="cursor-pointer">
+                {currentTheme?.icon ||
+                  (theme === "light" ? <BsSun /> : <BsMoon />)}
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
