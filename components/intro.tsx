@@ -35,7 +35,7 @@ export default function Intro() {
               src={profileImage}
               alt="Mohammed Benkhattab portrait"
               priority={true}
-              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-secondary shadow-xl"
             />
           </motion.div>
 
@@ -56,7 +56,7 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-foreground"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -74,7 +74,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-primary font-bold text-background px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-forground active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -86,7 +86,7 @@ export default function Intro() {
 
         <a
           aria-label="Download CV"
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-background font-semibold px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
           href="/resume"
           target="_blank"
           download
@@ -97,7 +97,7 @@ export default function Intro() {
 
         <a
           aria-label="LinkedIn Profile"
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
           href="/linkedin"
           target="_blank"
         >
@@ -106,7 +106,7 @@ export default function Intro() {
 
         <a
           aria-label="Github Profile"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
           href="/github"
           target="_blank"
         >
