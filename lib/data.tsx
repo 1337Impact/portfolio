@@ -218,10 +218,6 @@ export const skillsData = [
     src: "/images/skills/js.svg",
   },
   {
-    name: "AngularJS",
-    src: "/images/skills/ts.svg",
-  },
-  {
     name: "React Native",
     src: "/images/skills/react-native.svg",
   },
@@ -229,10 +225,6 @@ export const skillsData = [
     name: "NextJs",
     src: "/images/skills/nextjs.svg",
     dark: "/images/skills/nextjs-dark.svg",
-  },
-  {
-    name: "Angular",
-    src: "/images/skills/angular.svg",
   },
   {
     name: "ExpressJS",
@@ -246,6 +238,19 @@ export const skillsData = [
   {
     name: "Git",
     src: "/images/skills/git.svg",
+  },
+  {
+    name: "Github",
+    src: "/images/skills/github.svg",
+    dark: "/images/skills/github-dark.svg",
+  },
+  {
+    name: "Supabase",
+    src: "/images/skills/supabase.svg",
+  },
+  {
+    name: "TailwindCSS",
+    src: "/images/skills/tailwindcss.svg",
   },
 ];
 
