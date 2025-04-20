@@ -396,8 +396,8 @@ export const themeOptions: ThemeOption[] = [
   },
 ];
 
-export const emailId = "mohammed@benkhattab.dev" as const;
-export const websiteUrl = "benkhattab.dev" as const;
+export const emailId = "mohammed@benkhattab.tech" as const;
+export const websiteUrl = "benkhattab.tech" as const;
 
 export const documentsName = {
   cover_letter: "Mohammed_Benkhattab_Cover_Letter.pdf",

@@ -22,6 +22,6 @@ Visit my portfolio website to check out the projects I've worked on, learn more 
 
 ## Contact
 
-If you have any questions or want to collaborate on a project, feel free to reach out to me at [mohammed@benkhattab.dev](mailto:mohammed@benkhattab.dev).
+If you have any questions or want to collaborate on a project, feel free to reach out to me at [mohammed@benkhattab.tech](mailto:mohammed@benkhattab.tech).
 
 Thank you for visiting my portfolio website!

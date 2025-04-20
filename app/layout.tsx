@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     "Welzy Alzy",
     "mohammed",
     "benkhattab",
-    "benkhattab.dev",
-    "www.benkhattab.dev",
+    "benkhattab.tech",
+    "www.benkhattab.tech",
   ],
   authors: {
     name: "Mohammed Benkhattab",
-    url: "https://www.benkhattab.dev",
+    url: "https://www.benkhattab.tech",
   },
   robots: {
     index: true,
