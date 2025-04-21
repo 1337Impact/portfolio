@@ -23,15 +23,6 @@ importers:
       '@react-email/tailwind':
         specifier: ^0.1.0
         version: 0.1.0(react@18.3.1)
-      '@types/node':
-        specifier: 22.7.9
-        version: 22.7.9
-      '@types/react':
-        specifier: 18.3.12
-        version: 18.3.12
-      '@types/react-dom':
-        specifier: 18.3.1
-        version: 18.3.1
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.47)
@@ -93,6 +84,15 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
     devDependencies:
+      '@types/node':
+        specifier: 22.7.9
+        version: 22.7.9
+      '@types/react':
+        specifier: 18.3.12
+        version: 18.3.12
+      '@types/react-dom':
+        specifier: 18.3.1
+        version: 18.3.1
       '@types/react-vertical-timeline-component':
         specifier: ^3.3.6
         version: 3.3.6
