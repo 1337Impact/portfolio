@@ -398,7 +398,7 @@ export const themeOptions: ThemeOption[] = [
   },  
 ];
 
-export const emailId = "mohammed@benkhattab.tech" as const;
+export const emailId = "mobenkhattab@gmail.com" as const;
 export const websiteUrl = "benkhattab.tech" as const;
 
 export const documentsName = {
