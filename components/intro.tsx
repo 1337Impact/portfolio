@@ -75,7 +75,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-primary font-bold text-background px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-forground active:scale-105 transition"
+          className="group bg-foreground font-bold text-background px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-forground active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -87,7 +87,7 @@ export default function Intro() {
 
         <a
           aria-label="Download CV"
-          className="group bg-background font-semibold px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
+          className="group bg-background font-semibold px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer border border-foreground shadow-sm hover:bg-accent/10"
           href="/resume"
           target="_blank"
           download
@@ -98,7 +98,7 @@ export default function Intro() {
         <div className="flex items-center justify-center gap-2">
           <a
             aria-label="LinkedIn Profile"
-            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
+            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-foreground shadow-sm hover:bg-accent/10"
             href="/linkedin"
             target="_blank"
           >
@@ -107,7 +107,7 @@ export default function Intro() {
 
           <a
             aria-label="Github Profile"
-            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-accent shadow-sm hover:bg-accent/10"
+            className="bg-background p-4 text-muted-foreground hover:text-foreground flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-foreground shadow-sm hover:bg-accent/10"
             href="/github"
             target="_blank"
           >

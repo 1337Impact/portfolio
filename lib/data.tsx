@@ -291,7 +291,7 @@ export const themeOptions: ThemeOption[] = [
     colors: {
       background: "#ffffff",
       foreground: "#020817",
-      primary: "#0f172a",
+      primary: "#1e293b",
       secondary: "#f1f5f9",
       muted: "#f1f5f9",
       "muted-foreground": "#64748b",
@@ -321,9 +321,9 @@ export const themeOptions: ThemeOption[] = [
     label: "Lemon",
     icon: <GiLemon className="h-4 w-4" />,
     colors: {
-      background: "#FFFACD",
+      background: "#FFF8F1",
       foreground: "#556B2F",
-      primary: "#FFA500",
+      primary: "#FFB347",
       secondary: "#E6F2A2",
       muted: "#F0E68C",
       "muted-foreground": "#556B2F",
@@ -339,7 +339,7 @@ export const themeOptions: ThemeOption[] = [
     colors: {
       background: "#F1F8E9",
       foreground: "#33691E",
-      primary: "#558B2F",
+      primary: "#7CB342",
       secondary: "#DCEDC8",
       muted: "#C5E1A5",
       "muted-foreground": "#33691E",
@@ -355,7 +355,7 @@ export const themeOptions: ThemeOption[] = [
     colors: {
       background: "#E3F2FD",
       foreground: "#01579B",
-      primary: "#0288D1",
+      primary: "#4FC3F7",
       secondary: "#B3E5FC",
       muted: "#81D4FA",
       "muted-foreground": "#01579B",
@@ -371,7 +371,7 @@ export const themeOptions: ThemeOption[] = [
     colors: {
       background: "#F3E5F5",
       foreground: "#4A148C",
-      primary: "#7B1FA2",
+      primary: "#BA68C8",
       secondary: "#E1BEE7",
       muted: "#CE93D8",
       "muted-foreground": "#4A148C",
@@ -387,7 +387,7 @@ export const themeOptions: ThemeOption[] = [
     colors: {
       background: "#FFF3E0",
       foreground: "#BF360C",
-      primary: "#E64A19",
+      primary: "#FF7043",
       secondary: "#FFE0B2",
       muted: "#FFCC80",
       "muted-foreground": "#BF360C",
@@ -395,7 +395,7 @@ export const themeOptions: ThemeOption[] = [
       "accent-foreground": "#BF360C",
       "card-background": "#FFF8E1",
     },
-  },
+  },  
 ];
 
 export const emailId = "mohammed@benkhattab.tech" as const;
